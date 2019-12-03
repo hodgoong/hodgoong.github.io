@@ -8,6 +8,7 @@ function export_html(data) {
 function loadMDs(file){
 	var txtFile = new XMLHttpRequest();
     txtFile.open("GET", "https://hodgoong.github.io/" + file , true);
+    txtFile.send(null);
     txtFile.onreadystatechange = function() {
         if (txtFile.readyState === 4) { // Makes sure the document is ready to parse.
             if (txtFile.status === 200) { // Makes sure the file exists.
