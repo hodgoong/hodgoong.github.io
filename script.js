@@ -22,14 +22,15 @@ function loadMarkdown(fileLoc, divId){
 
 function loadFolder(folderLoc, divId){
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://hodgoong.github.io/" + folderLoc , true);
+    xhr.open("GET", "https://github.com/hodgoong/hodgoong.github.io/tree/master/contents/" + folderLoc , true);
     xhr.send(null);
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                let html = exportHtml(xhr.responseText);
-                document.getElementById(divId).innerHTML = html;
+                //let html = exportHtml(xhr.responseText);
+                console.log(xhr.responseText)
+                //document.getElementById(divId).innerHTML = html;
             }
         }
     }
