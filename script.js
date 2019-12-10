@@ -1,34 +1,32 @@
 let folderRootUrl = "https://api.github.com/repos/hodgoong/hodgoong.github.io/git/trees/master";
+let counts = {
+    prod: 0,
+    proj: 0,
+    pub: 0
+}
 
-(loadFolder(folderRootUrl, function(res){
+(readFolder(folderRootUrl, function(res){
     JSON.parse(res).tree.forEach(function(item){
         if(item.path === "contents"){
             console.log(item.url);
-            console.log("going deeper..");
-            console.log("");
-            loadFolder(item.url, function(res){
-
-                let mds = [];
-                let prodsCount = 0;
-                let projsCount = 0;
-                let pubsCount = 0;
+            console.log("diving into contents folder....");
+            console.log("===============================");
+            readFolder(item.url, function(res){
 
                 JSON.parse(res).tree.forEach(function(item){
                     if(item.path.startsWith("prod_")){
-                        prodsCount += 1;
+                        counts.prod += 1;
                     }
                     if(item.path.startsWith("proj_")){
-                        projsCount += 1;
+                        counts.proj += 1;
                     }
                     if(item.path.startsWith("pub_")){
-                        pubsCount += 1;
+                        counts.pub += 1;
                     }
                     loadMarkdown(item.path);
                 });
 
-                console.log("prods:" + prodsCount);
-                console.log("projs:" + projsCount);
-                console.log("pubs:" + pubsCount);
+                console.log(counts);
             });
         }
     });
@@ -43,20 +41,23 @@ function exportHtml(data) {
 
 function loadMarkdown(fileName){
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://hodgoong.github.io/contents/"+fileName, true);
+    xhr.open("GET", "https://hodgoong.github.io/contents/" + fileName, true);
     xhr.send(null);
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 let html = exportHtml(xhr.responseText);
+                if(fileName.endsWith(".md")){
+                    fileName = fileName.replace(".md","");
+                }
                 document.getElementById(fileName).innerHTML = html;
             }
         }
     }
 }
 
-function loadFolder(url, fn){
+function readFolder(url, fn){
     let xhr = new XMLHttpRequest();
     xhr.open("GET", url , true);
     xhr.send(null);
