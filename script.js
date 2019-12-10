@@ -9,21 +9,11 @@ let folderRootUrl = "https://api.github.com/repos/hodgoong/hodgoong.github.io/gi
             loadFolder(item.url, function(res){
 
                 let mds = [];
-                JSON.parse(res).tree.forEach(function(item){
-                    mds.push(
-                        {
-                            path: item.path,
-                            url: item.url
-                        });
-                });
-
-                console.log(mds);
-                
                 let prodsCount = 0;
                 let projsCount = 0;
                 let pubsCount = 0;
 
-                mds.forEach(function(item){
+                JSON.parse(res).tree.forEach(function(item){
                     if(item.path.startsWith("prod_")){
                         prodsCount += 1;
                     }
