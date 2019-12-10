@@ -28,10 +28,10 @@ let folderRootUrl = "https://api.github.com/repos/hodgoong/hodgoong.github.io/gi
                         prodsCount += 1;
                     }
                     if(item.path.startsWith("proj_")){
-                        prodsCount += 1;
+                        projsCount += 1;
                     }
                     if(item.path.startsWith("pub_")){
-                        prodsCount += 1;
+                        pubsCount += 1;
                     }
                     loadMarkdown(item.path);
                 });
@@ -59,7 +59,7 @@ function loadMarkdown(fileName){
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                let html = exportHtml(res.responseText);
+                let html = exportHtml(xhr.responseText);
                 document.getElementById(fileName).innerHTML = html;
             }
         }
