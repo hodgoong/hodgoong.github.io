@@ -1,9 +1,4 @@
 let folderRootUrl = "https://api.github.com/repos/hodgoong/hodgoong.github.io/git/trees/master";
-let counts = {
-    prod: 0,
-    proj: 0,
-    pub: 0
-}
 
 (readFolder(folderRootUrl, function(res){
     JSON.parse(res).tree.forEach(function(item){
@@ -13,20 +8,29 @@ let counts = {
             console.log("===============================");
             readFolder(item.url, function(res){
 
+                let counts = {
+                    prod: 0,
+                    proj: 0,
+                    pub: 0,
+                    max: function(){
+                        return Math.max(this.prod, this.proj, this.pub);
+                    }
+                }
+
                 JSON.parse(res).tree.forEach(function(item){
                     if(item.path.startsWith("prod_")){
                         counts.prod += 1;
                     }
-                    if(item.path.startsWith("proj_")){
+                    else if(item.path.startsWith("proj_")){
                         counts.proj += 1;
                     }
-                    if(item.path.startsWith("pub_")){
+                    else {
                         counts.pub += 1;
                     }
                     loadMarkdown(item.path);
                 });
 
-                console.log(counts);
+                console.log(counts.max());
             });
         }
     });
