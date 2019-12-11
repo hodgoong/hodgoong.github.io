@@ -24,7 +24,7 @@ let folderRootUrl = "https://api.github.com/repos/hodgoong/hodgoong.github.io/gi
                     else if(item.path.startsWith("proj_")){
                         counts.proj += 1;
                     }
-                    else {
+                    else if(item.path.startsWith("pub_")){
                         counts.pub += 1;
                     }
                     loadMarkdown(item.path);
@@ -38,10 +38,51 @@ let folderRootUrl = "https://api.github.com/repos/hodgoong/hodgoong.github.io/gi
 
 function exportHtml(data) {
     let converter = new showdown.Converter();
-    let html = converter.makeHtml(data);
+    let html;
+    let arrByLines = data.split("\n");
+    
+    //collect first two lines and use it for preview
+    if(arrByLines.length >= 3){
+        let previewTitle = arrByLines[0];
+        let previewImageUrl = arrByLines[1];
+        
+        //create html code for preview
+        let cardHtml =         
+        `
+        <a style="background: url(`+ previewImageUrl +`);height: 50rem; width: 22rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);">` + previewTitle + ` </a>
+        `
+
+        //collect rest lines to use it for main contents
+        //window popup when clicked
+        arrByLines.splice(0,2);
+        let txtLines = "";
+        arrByLines.forEach(function(line){
+            txtLines += line + "\n";
+        })
+        let popupHtml = converter.makeHtml(txtLines)
+
+        //create html code to wrap above html
+        //to be hidden in the beginning and shown when clicked
+
+        html = cardHtml + popupHtml;
+
+        // need to create html to show preview 
+        // and the actual contents when clicked  
+    }
+    else if(arrByLines.length == 2){
+        let previewTitle = converter.makeHtml(arrByLines[0]);
+        let previewImage = converter.makeHtml(arrByLines[1]);
+
+        html = preiewTitle + previewImage;
+    }
+    else{
+        html = converter.makeHtml(data);
+    }
+    console.log(html);
 
     return html;
 }
+
 
 function loadMarkdown(fileName){
     let xhr = new XMLHttpRequest();
@@ -55,7 +96,20 @@ function loadMarkdown(fileName){
                 if(fileName.endsWith(".md")){
                     fileName = fileName.replace(".md","");
                 }
-                document.getElementById(fileName).innerHTML = html;
+
+                let x = document.createElement("div"); 
+                x.id = fileName;
+                x.innerHTML = html;
+
+                if(fileName.startsWith("prod_")){
+                    document.getElementById("products").appendChild(x);
+                }
+                else if(fileName.startsWith("proj_")){
+                    document.getElementById("projects").appendChild(x);
+                }
+                else if(fileName.startsWith("pub_")){
+                    document.getElementById("publications").appendChild(x);
+                }
             }
         }
     }
