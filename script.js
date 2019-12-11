@@ -49,7 +49,13 @@ function exportHtml(data) {
         //create html code for preview
         let cardHtml =         
         `
-        <a style="background: url(`+ previewImageUrl +`);height: 50rem; width: 22rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);">` + previewTitle + ` </a>
+        <a style="
+            display: block;
+            background: url(`+ previewImageUrl +`);
+            height: 30%;
+            width: 30%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);">` + previewTitle + `
+        </a>
         `
 
         //collect rest lines to use it for main contents
