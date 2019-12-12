@@ -6,6 +6,7 @@
     padding-top: 20px;
     border-radius: 10px;
     text-align: center;
+    margin:20px;
 }
 
 * .microcard a {
@@ -23,6 +24,7 @@
     left: 0;
     right: 0;
     margin: auto;
+    overflow: hidden;
 }
 
 html {
