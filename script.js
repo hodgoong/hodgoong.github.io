@@ -38,43 +38,42 @@ let folderRootUrl = "https://api.github.com/repos/hodgoong/hodgoong.github.io/gi
 
 function exportHtml(data) {
     let converter = new showdown.Converter();
-    let html;
+    let html = "";
     let arrByLines = data.split("\n");
     
     //collect first two lines and use it for preview
     if(arrByLines.length >= 3){
-        let previewTitle = arrByLines[0];
-        let previewImage = arrByLines[1];
-        
+        html = createCard(arrByLines[0], arrByLines[1])
         //create html code for preview
-        let cardHtml = createCard(previewTitle, previewImage)
+        // let cardHtml = createCard(arrByLines[0], arrByLines[1])
 
         //collect rest lines to use it for main contents
         //window popup when clicked
-        arrByLines.splice(0,2);
-        let txtLines = "";
-        arrByLines.forEach(function(line){
-            txtLines += line + "\n";
-        })
-        let popupHtml = converter.makeHtml(txtLines)
+        // arrByLines.splice(0,2);
+        // let txtLines = "";
+        // arrByLines.forEach(function(line){
+        //     txtLines += line + "\n";
+        // })
+        // let popupHtml = converter.makeHtml(txtLines)
 
         //create html code to wrap above html
         //to be hidden in the beginning and shown when clicked
 
-        html = cardHtml + popupHtml;
+        // html = cardHtml + popupHtml;
 
         // need to create html to show preview 
         // and the actual contents when clicked  
     }
     else if(arrByLines.length == 2){
-        let previewTitle = converter.makeHtml(arrByLines[0]);
-        let previewImage = converter.makeHtml(arrByLines[1]);
+        // let previewTitle = converter.makeHtml(arrByLines[0]);
+        // let previewImage = converter.makeHtml(arrByLines[1]);
 
-        html = createCard(previewTitle, previewImage)
+        // html = createCard(previewTitle, previewImage)
+        html = createCard(arrByLines[0], arrByLines[1])
     }
     else{
-        let previewTitle = converter.makeHtml(arrByLines[0]);
-        html = createCard(previewTitle)
+        // let previewTitle = converter.makeHtml(arrByLines[0]);
+        html = createCard(arrByLines[0])
     }
     console.log(html);
 
