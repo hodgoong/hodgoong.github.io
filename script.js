@@ -129,11 +129,13 @@ function readFolder(url, fn){
 function createCard(title, img="", contents = ""){
     let cardHtml =         
     `
-    <div class="card">
-        <a>` + title + `</a>
-        <img src="`+ img +`">        
+    <div class="microcard">
+        <img src="`+ img +`"> 
+        <a>` + title + `</a>       
     </div>
     `
+    // add code to create contents tag
+    // make it hidden as default and show when card is clicked
 
     return cardHtml;
 }
