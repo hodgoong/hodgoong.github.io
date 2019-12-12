@@ -44,19 +44,10 @@ function exportHtml(data) {
     //collect first two lines and use it for preview
     if(arrByLines.length >= 3){
         let previewTitle = arrByLines[0];
-        let previewImageUrl = arrByLines[1];
+        let previewImage = arrByLines[1];
         
         //create html code for preview
-        let cardHtml =         
-        `
-        <a style="
-            display: block;
-            background: url(`+ previewImageUrl +`);
-            height: 30%;
-            width: 30%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);">` + previewTitle + `
-        </a>
-        `
+        let cardHtml = createCard(previewTitle, previewImage)
 
         //collect rest lines to use it for main contents
         //window popup when clicked
@@ -79,10 +70,11 @@ function exportHtml(data) {
         let previewTitle = converter.makeHtml(arrByLines[0]);
         let previewImage = converter.makeHtml(arrByLines[1]);
 
-        html = preiewTitle + previewImage;
+        html = createCard(previewTitle, previewImage)
     }
     else{
-        html = converter.makeHtml(data);
+        let previewTitle = converter.makeHtml(arrByLines[0]);
+        html = createCard(previewTitle)
     }
     console.log(html);
 
@@ -133,4 +125,16 @@ function readFolder(url, fn){
             }
         }
     }
+}
+
+function createCard(title, img="", contents = ""){
+    let cardHtml =         
+    `
+    <div class="card">
+        <a>` + title + `</a>
+        <img src="`+ img +`">        
+    </div>
+    `
+
+    return cardHtml;
 }
