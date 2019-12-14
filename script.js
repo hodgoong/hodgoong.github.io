@@ -40,7 +40,7 @@ function exportHtml(data, fileName) {
 
     let html = "";
     let cardId = "cardId_" + fileName;
-    let contentId = "contentId" + fileName;
+    let contentId = "contentId_" + fileName;
     let arrByLines = data.split("\n");
     
     //collect first two lines and use it for preview
@@ -148,7 +148,7 @@ function createCard(title, img="", id){
     return cardHtml;
 }
 
-function createContent(id, contents){
+function createContent(contents, id){
     let converter = new showdown.Converter();
     let convertedHtml = converter.makeHtml(contents)
     let contentHtml=
@@ -177,10 +177,10 @@ function switcher(id, openState){
     
     if(openState){
         if(id.startsWith("contentId_") && id.endsWith("_button")){
-            let cardId = id.replace("contentId_","cardId_").replace("_button","");
-            if(document.getElementById(cardId)){
-                document.getElementById(cardId).style.display = "none";
-                document.getElementById(cardId).style.overflowY="hidden";
+            let contentId = id.replace("_button","");
+            if(document.getElementById(contentId)){
+                document.getElementById(contentId).style.display = "none";
+                document.getElementById(contentId).style.overflowY="hidden";
                 document.body.style.overflow="initial";
             }
         }
