@@ -46,26 +46,15 @@ function exportHtml(data, fileName) {
     //collect first two lines and use it for preview
     if(arrByLines.length >= 3){
         html = createCard(arrByLines[0], arrByLines[1], cardId)
-        //create html code for preview
-        //let cardHtml = createCard(arrByLines[0], arrByLines[1])
 
         //collect rest lines to use it for main contents
-        //window popup when clicked
-        
+        //window popup when clicked  
         arrByLines.splice(0,2);
         let txtLines = "";
         arrByLines.forEach(function(line){
             txtLines += line + "\n";
         })
         html += createContent(txtLines, contentId);
-        
-        //create html code to wrap above html
-        //to be hidden in the beginning and shown when clicked
-
-        // html = cardHtml + popupHtml;
-
-        // need to create html to show preview 
-        // and the actual contents when clicked  
     }
     else if(arrByLines.length == 2){
         html = createCard(arrByLines[0], arrByLines[1], cardId)
@@ -90,7 +79,7 @@ function loadMarkdown(fileName){
                     fileName = fileName.replace(".md","");
                 }
 
-                //fileName is Id for HTML card element
+                //fileName is an idd for the HTML card and content element
 
                 let html = exportHtml(xhr.responseText, fileName);
                 if(fileName.endsWith(".md")){
@@ -115,6 +104,7 @@ function loadMarkdown(fileName){
     }
 }
 
+// read github folder structure
 function readFolder(url, fn){
     let xhr = new XMLHttpRequest();
     xhr.open("GET", url , true);
@@ -142,12 +132,11 @@ function createCard(title, img="", id){
         </div>
     </div>
     `
-    // add code to create contents tag
-    // make it hidden as default and show when card is clicked
 
     return cardHtml;
 }
 
+// creates content(hidden as default) html
 function createContent(contents, id){
     let converter = new showdown.Converter();
     let convertedHtml = converter.makeHtml(contents)
@@ -155,7 +144,7 @@ function createContent(contents, id){
     `
     <div class="contents-popup">
         <div class="contents" id="${id}" onscroll="scroll()">
-            <a id="${id+"_button"}" onClick="switcher(this.id,true)" style="position:fixed;top:10px;right:10px">X</a>`
+            <a id="${id + "_button"}" onClick="switcher(this.id,true)" style="position:fixed;top:10px;right:10px">X</a>`
             + convertedHtml + `
         </div>
     </div>
@@ -163,6 +152,7 @@ function createContent(contents, id){
     return contentHtml;
 }
 
+// controls content popup
 function switcher(id, openState){
     if(!openState){
         if(id.startsWith("cardId_")){
