@@ -45,10 +45,11 @@ function exportHtml(data) {
     if(arrByLines.length >= 3){
         html = createCard(arrByLines[0], arrByLines[1])
         //create html code for preview
-        // let cardHtml = createCard(arrByLines[0], arrByLines[1])
+        //let cardHtml = createCard(arrByLines[0], arrByLines[1])
 
         //collect rest lines to use it for main contents
         //window popup when clicked
+        
         // arrByLines.splice(0,2);
         // let txtLines = "";
         // arrByLines.forEach(function(line){
@@ -130,8 +131,13 @@ function createCard(title, img="", contents = ""){
     let cardHtml =         
     `
     <div class="microcard">
-        <img src="`+ img +`"> 
-        <a>` + title + `</a>       
+        <div class="microcard-img">
+            <img src="`+ img +`">
+        </div>
+        <div class="microcard-text">
+            <a class="title">` + title + `</a>
+            <p class="description"> lorem ipsum lorem ipsum </p>
+        </div>
     </div>
     `
     // add code to create contents tag

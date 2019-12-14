@@ -1,28 +1,14 @@
-* .microcard {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    box-shadow: 2px 2px 5px grey;
-    padding-top: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin:20px;
-    overflow: hidden;
-}
+* {
+    font-family: 'Ubuntu', sans-serif;
+   }
 
-* .microcard a {
-    font-size: 20px;
-}
+a:link { color: black; TEXT-DECORATION: none; font-weight: normal }
+a:visited { color: black; TEXT-DECORATION: none; font-weight: normal }
+a:active { color: black; TEXT-DECORATION: none }
+a:hover { color: green; TEXT-DECORATION: none; font-weight: none }
 
-* .microcard img {
-    width:100%;
-    height:auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+.small-font{
+    font-size:11px;
 }
 
 html {
@@ -30,18 +16,93 @@ html {
     min-height: 100%;
 }
 
-header{
-    height: 100px;
+#title.container-fluid{
+    position:fixed;
+    background-color:rgba(255, 255, 255, 1);
+    top:0;
+    font-size: 30px;
+    height: 50px;
     text-align: center;
+    letter-spacing: 0;
 }
 
-body{
+#menu.container-fluid{
+    position:fixed;
+    background-color:rgba(255, 255, 255, 1);
+    top:50px;
+    right: 20px;
+    text-align: right;
+}
+
+#menu.container-fluid a{
+    margin: 2px;
+}
+
+#spacer {
+    height:20px;
+}
+
+body {
+    top: 60px;
+    position: relative;
     margin: 0 0 25px;
-    padding: 25px;
+    padding: 5px;
 }
 
-footer{
+/* cards */
+.microcard {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.microcard-text {
+    position: relative;
+    text-align: left;
+    height: 30%;
+    background-color:rgba(255, 255, 255, 0.75);
+}
+
+.microcard-text > .title {
+    position: relative;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.microcard-text > .description {
+    position: relative;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 10px;
+}
+
+.microcard-img {
+    height: 70%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.microcard-img > img {
     position: absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+    width: 100%;
+    bottom:0;
+    vertical-align: middle;
+}
+
+#footer {
+    position: fixed;
+    font-size: 9px;
+    bottom:0;
     left: 0;
     bottom: 0;
     height: 25px;
