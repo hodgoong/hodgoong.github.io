@@ -11,10 +11,11 @@ a:hover { color: green; TEXT-DECORATION: none; font-weight: none }
     font-size:11px;
 }
 
-html {
+html{
     position: relative;
     min-height: 100%;
 }
+
 
 #title.container-fluid{
     position:fixed;
@@ -97,6 +98,22 @@ body {
     width: 100%;
     bottom:0;
     vertical-align: middle;
+}
+
+.contents-popup > .contents{
+    position:fixed;
+    padding:10%;
+    margin:0;
+    top:0;
+    left:0;
+    z-index: 1;
+    text-align: left;
+    display:none;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(0,0,0,0.8); 
+    color:white;
+    overflow-y:scroll;
 }
 
 #footer {

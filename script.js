@@ -36,27 +36,29 @@ let folderRootUrl = "https://api.github.com/repos/hodgoong/hodgoong.github.io/gi
     });
 }))()
 
-function exportHtml(data) {
-    let converter = new showdown.Converter();
+function exportHtml(data, fileName) {
+
     let html = "";
+    let cardId = "cardId_" + fileName;
+    let contentId = "contentId" + fileName;
     let arrByLines = data.split("\n");
     
     //collect first two lines and use it for preview
     if(arrByLines.length >= 3){
-        html = createCard(arrByLines[0], arrByLines[1])
+        html = createCard(arrByLines[0], arrByLines[1], cardId)
         //create html code for preview
         //let cardHtml = createCard(arrByLines[0], arrByLines[1])
 
         //collect rest lines to use it for main contents
         //window popup when clicked
         
-        // arrByLines.splice(0,2);
-        // let txtLines = "";
-        // arrByLines.forEach(function(line){
-        //     txtLines += line + "\n";
-        // })
-        // let popupHtml = converter.makeHtml(txtLines)
-
+        arrByLines.splice(0,2);
+        let txtLines = "";
+        arrByLines.forEach(function(line){
+            txtLines += line + "\n";
+        })
+        html += createContent(txtLines, contentId);
+        
         //create html code to wrap above html
         //to be hidden in the beginning and shown when clicked
 
@@ -66,21 +68,15 @@ function exportHtml(data) {
         // and the actual contents when clicked  
     }
     else if(arrByLines.length == 2){
-        // let previewTitle = converter.makeHtml(arrByLines[0]);
-        // let previewImage = converter.makeHtml(arrByLines[1]);
-
-        // html = createCard(previewTitle, previewImage)
-        html = createCard(arrByLines[0], arrByLines[1])
+        html = createCard(arrByLines[0], arrByLines[1], cardId)
     }
     else{
-        // let previewTitle = converter.makeHtml(arrByLines[0]);
-        html = createCard(arrByLines[0])
+        html = createCard(arrByLines[0],"",cardId)
     }
     console.log(html);
 
     return html;
 }
-
 
 function loadMarkdown(fileName){
     let xhr = new XMLHttpRequest();
@@ -90,7 +86,13 @@ function loadMarkdown(fileName){
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                let html = exportHtml(xhr.responseText);
+                if(fileName.endsWith(".md")){
+                    fileName = fileName.replace(".md","");
+                }
+
+                //fileName is Id for HTML card element
+
+                let html = exportHtml(xhr.responseText, fileName);
                 if(fileName.endsWith(".md")){
                     fileName = fileName.replace(".md","");
                 }
@@ -127,15 +129,15 @@ function readFolder(url, fn){
     }
 }
 
-function createCard(title, img="", contents = ""){
+function createCard(title, img="", id){
     let cardHtml =         
     `
-    <div class="microcard">
+    <div class="microcard" id=${id} onClick="switcher(this.id, false)">
         <div class="microcard-img">
-            <img src="`+ img +`">
+            <img src="${img}">
         </div>
         <div class="microcard-text">
-            <a class="title">` + title + `</a>
+            <a class="title">${title}</a>
             <p class="description"> lorem ipsum lorem ipsum </p>
         </div>
     </div>
@@ -144,4 +146,43 @@ function createCard(title, img="", contents = ""){
     // make it hidden as default and show when card is clicked
 
     return cardHtml;
+}
+
+function createContent(id, contents){
+    let converter = new showdown.Converter();
+    let convertedHtml = converter.makeHtml(contents)
+    let contentHtml=
+    `
+    <div class="contents-popup">
+        <div class="contents" id="${id}" onscroll="scroll()">
+            <a id="${id+"_button"}" onClick="switcher(this.id,true)" style="position:fixed;top:10px;right:10px">X</a>`
+            + convertedHtml + `
+        </div>
+    </div>
+    `
+    return contentHtml;
+}
+
+function switcher(id, openState){
+    if(!openState){
+        if(id.startsWith("cardId_")){
+            let contentId = id.replace("cardId_","contentId_");
+            if(document.getElementById(contentId)){
+                document.getElementById(contentId).style.display = "inline";
+                document.getElementById(contentId).style.overflowY="scroll";
+                document.body.style.overflow="hidden";
+            }
+        }
+    }
+    
+    if(openState){
+        if(id.startsWith("contentId_") && id.endsWith("_button")){
+            let cardId = id.replace("contentId_","cardId_").replace("_button","");
+            if(document.getElementById(cardId)){
+                document.getElementById(cardId).style.display = "none";
+                document.getElementById(cardId).style.overflowY="hidden";
+                document.body.style.overflow="initial";
+            }
+        }
+    }
 }
