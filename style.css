@@ -1,6 +1,6 @@
 * {
     font-family: 'Ubuntu', sans-serif;
-   }
+}
 
 a:link { color: black; TEXT-DECORATION: none; font-weight: normal }
 a:visited { color: black; TEXT-DECORATION: none; font-weight: normal }
@@ -22,7 +22,7 @@ html{
     background-color:rgba(255, 255, 255, 1);
     top:0;
     font-size: 30px;
-    height: 50px;
+    height: 70px;
     text-align: center;
     letter-spacing: 0;
 }
@@ -30,7 +30,7 @@ html{
 #menu.container-fluid{
     position:fixed;
     background-color:rgba(255, 255, 255, 1);
-    top:50px;
+    top:70px;
     right: 20px;
     text-align: right;
 }
@@ -44,17 +44,30 @@ html{
 }
 
 body {
-    top: 60px;
+    top: 80px;
     position: relative;
     margin: 0 0 25px;
     padding: 5px;
 }
 
 /* cards */
+.dummyCard{
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: lightgrey;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
 .microcard {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 240px;
     border-style: solid;
     border-width: 1px;
     border-color: lightgrey;
@@ -72,16 +85,19 @@ body {
 
 .microcard-text > .title {
     position: relative;
+    margin-top: 4px;
     margin-left: 8px;
     margin-right: 8px;
+    line-height: 95%;
     font-size: 16px;
+    display:inline-block;
 }
 
 .microcard-text > .description {
     position: relative;
     margin-left: 8px;
     margin-right: 8px;
-    font-size: 10px;
+    font-size:11px;
 }
 
 .microcard-img {
@@ -95,6 +111,7 @@ body {
     top:0;
     bottom:0;
     margin:auto;
+    /* min-height:100%; */
     width: 100%;
     bottom:0;
     vertical-align: middle;
@@ -116,6 +133,18 @@ body {
     overflow-y:scroll;
 }
 
+.contents > .x{
+    position:fixed;
+    top:10px;
+    right:3%;
+    background-color:rgba(255,255,255,0.15);
+    font-size:28px;
+    border-style:solid;
+    border-width:1px;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
 #footer {
     position: fixed;
     font-size: 9px;
@@ -127,3 +156,4 @@ body {
     text-align: center;
     overflow: hidden;
 }
+
