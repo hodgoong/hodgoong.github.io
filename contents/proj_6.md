@@ -1,5 +1,5 @@
 Script-based Product Description
-https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/scriptbase.png
+https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/scriptbase2.png
 @BIM.5d, STRABAG/Ed. Züblin AG
 
 **The standard Lorem Ipsum passage, used since the 1500s**
