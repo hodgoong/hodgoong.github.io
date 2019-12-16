@@ -1,5 +1,5 @@
 Master Thesis
-https://github.com/hodgoong/flipcard/raw/master/public/img/master_thesis.png
+https://github.com/hodgoong/hodgoong.github.io/blob/master/contents/img/master_thesis.png
 Application of variable stiffness to compliant systems focusing on layer jamming as a variable stiffness method
 
 
