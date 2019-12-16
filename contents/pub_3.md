@@ -1,5 +1,5 @@
 Master Thesis
-https://d30womf5coomej.cloudfront.net/sa/3a/49/de/5c/65071333e8d74384b2cd49b2a1ccaa61.jpg
+https://github.com/hodgoong/flipcard/raw/master/public/img/master_thesis.png
 Application of variable stiffness to compliant systems focusing on layer jamming as a variable stiffness method
 
 
