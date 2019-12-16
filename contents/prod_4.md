@@ -1,6 +1,6 @@
-Issue Manager for CATIA v5
+Issue Manager
 https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/issue_manager_2013.jpg
-
+for CATIA V5
 
 
 **The standard Lorem Ipsum passage, used since the 1500s**
