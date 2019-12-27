@@ -63,7 +63,6 @@ function searchTree(res){
 }
 
 function exportHtml(data, fileName) {
-
     let html = '';
     let cardId = 'cardId_' + fileName;
     let contentId = 'contentId_' + fileName;
@@ -74,12 +73,13 @@ function exportHtml(data, fileName) {
 
     let arrByLines = data.split('\n');
     
-    //collect first two lines and use it for preview
+    //collect first two lines and use it for the preview
     if(arrByLines.length >= 4){
+        //input: title, image URL, description, id
         html = createCard(arrByLines[0], arrByLines[1], arrByLines[2], cardId)
 
-        //collect rest lines to use it for main contents
-        //window popup when clicked  
+        //collect rest of the lines to use it as a 
+        //main content for the popup window when clicked 
         arrByLines.splice(0,2);
         let txtLines = '';
         arrByLines.forEach(function(line){
@@ -88,7 +88,7 @@ function exportHtml(data, fileName) {
         html += createContent(txtLines, contentId);
     }
     else if(arrByLines.length == 3){
-        html = createCard(arrByLines[0], arrByLines[1], createCard[3], cardId);
+        html = createCard(arrByLines[0], arrByLines[1], createCard[2], cardId);
     }
     else if(arrByLines.length == 2){
         html = createCard(arrByLines[0],arrByLines[1], '', cardId);

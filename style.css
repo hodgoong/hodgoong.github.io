@@ -11,18 +11,28 @@ a:hover { color: green; TEXT-DECORATION: none; font-weight: none }
     font-size:11px;
 }
 
+
 html{
     position: relative;
     min-height: 100%;
 }
 
+.container-fluid{
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.col-lg-4{
+    padding-left:3px;
+    padding-right:3px;
+}
 
 #title.container-fluid{
     position:fixed;
     background-color:rgba(255, 255, 255, 1);
     top:0;
-    font-size: 30px;
     height: 70px;
+    font-size: 36px;
     text-align: center;
     letter-spacing: 0;
 }
@@ -31,49 +41,42 @@ html{
     position:fixed;
     background-color:rgba(255, 255, 255, 1);
     top:70px;
-    right: 20px;
-    text-align: right;
+    height: 30px;
+    text-align: center;
 }
 
 #menu.container-fluid a{
-    margin: 2px;
+    padding: 6px;
 }
 
 #spacer {
     height:20px;
 }
 
+#main.container-fluid{
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
 body {
-    top: 80px;
+    top: 100px;
     position: relative;
-    margin: 0 0 25px;
-    padding: 5px;
+    margin: 0 0 35px;
 }
 
 /* cards */
-.dummyCard{
-    position: relative;
-    width: 100%;
-    height: 240px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: lightgrey;
-    background-color: lightgrey;
-    border-radius: 3px;
-    margin-bottom: 5px;
-    overflow: hidden;
-}
-
 .microcard {
     position: relative;
+    background-color:rgba(255, 255, 255, 1);
+    border-color: lightgrey;
     width: 100%;
     height: 240px;
     border-style: solid;
     border-width: 1px;
-    border-color: lightgrey;
     border-radius: 3px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     overflow: hidden;
+    box-shadow: 0px 0px 2px 1px #e7e7e7;
 }
 
 .microcard-text {
@@ -147,10 +150,9 @@ body {
 
 #footer {
     position: fixed;
-    font-size: 9px;
+    font-size: 10px;
     bottom:0;
     left: 0;
-    bottom: 0;
     height: 25px;
     width: 100%;
     text-align: center;
