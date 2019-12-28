@@ -15,7 +15,24 @@ a:hover { color: green; TEXT-DECORATION: none; font-weight: none }
 html{
     position: relative;
     min-height: 100%;
+    -ms-overflow-style: none;
 }
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    overflow-y: scroll;
+}
+
+svg{
+    vertical-align: top;
+    width:24px;
+    height:24px;
+    margin-left: 6px;
+}
+
 
 .container-fluid{
     padding-left:0px;
@@ -29,20 +46,22 @@ html{
 
 #title.container-fluid{
     position:fixed;
-    background-color:rgba(255, 255, 255, 1);
+    background-color:rgba(255, 255, 255, 0.90);
     top:0;
-    height: 70px;
+    height: 50px;
     font-size: 36px;
     text-align: center;
     letter-spacing: 0;
+    vertical-align: middle;
 }
 
 #menu.container-fluid{
     position:fixed;
-    background-color:rgba(255, 255, 255, 1);
-    top:70px;
+    background-color:rgba(255, 255, 255, 0.90);
+    top:50px;
     height: 30px;
-    text-align: center;
+    text-align: right;
+    padding-right: 6vw;
 }
 
 #menu.container-fluid a{
@@ -66,6 +85,8 @@ body {
 
 /* cards */
 .microcard {
+    cursor:hand;
+    cursor: -webkit-hand;
     position: relative;
     background-color:rgba(255, 255, 255, 1);
     border-color: lightgrey;
@@ -76,7 +97,7 @@ body {
     border-radius: 3px;
     margin-bottom: 6px;
     overflow: hidden;
-    box-shadow: 0px 0px 2px 1px #e7e7e7;
+    box-shadow: 0px 0px 20px 0px lightgray;
 }
 
 .microcard-text {
@@ -88,19 +109,20 @@ body {
 
 .microcard-text > .title {
     position: relative;
-    margin-top: 4px;
+    margin-top: 6px;
     margin-left: 8px;
     margin-right: 8px;
     line-height: 95%;
-    font-size: 16px;
+    font-size: 20px;
     display:inline-block;
 }
 
 .microcard-text > .description {
     position: relative;
+    margin-top: 3px;
     margin-left: 8px;
     margin-right: 8px;
-    font-size:11px;
+    font-size:14px;
 }
 
 .microcard-img {
@@ -134,6 +156,7 @@ body {
     background-color:rgba(0,0,0,0.8); 
     color:white;
     overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .contents > .x{
@@ -144,8 +167,8 @@ body {
     font-size:28px;
     border-style:solid;
     border-width:1px;
-    cursor: -webkit-grab;
-    cursor: grab;
+    cursor: -webkit-hand;
+    cursor: hand;
 }
 
 #footer {
@@ -159,3 +182,20 @@ body {
     overflow: hidden;
 }
 
+/* Animations */
+
+.blink{
+    animation: blinker 0.7s ease-in-out infinite;
+    font-size: 18px;
+}
+
+@keyframes blinker {  
+    0% { opacity: 1; color:lightgray}
+    44% { opacity: 1; color:lightgray}
+    45% { opacity: 0; color:lightgray}
+    100% { opacity: 0; color:lightgray}
+    }
+
+svg:hover > a {
+    fill: lightgray;
+    }

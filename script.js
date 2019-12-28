@@ -85,7 +85,9 @@ function exportHtml(data, fileName) {
         arrByLines.forEach(function(line){
             txtLines += line + '\n';
         })
-        html += createContent(txtLines, contentId);
+        // html += createContent(txtLines, contentId);
+        createContent(txtLines, contentId);
+        // document.getElementById('container-contents').appendChild(contentHtml);
     }
     else if(arrByLines.length == 3){
         html = createCard(arrByLines[0], arrByLines[1], createCard[2], cardId);
@@ -112,7 +114,7 @@ function loadMarkdown(fileName){
                     fileName = fileName.replace('.md','');
                 }
 
-                //fileName is an idd for the HTML card and content element
+                //fileName is an id for the HTML card and content element
 
                 let html = exportHtml(xhr.responseText, fileName);
                 if(fileName.endsWith('.md')){
@@ -184,16 +186,30 @@ function createCard(title, img='', desc='', id){
 function createContent(contents, id){
     let converter = new showdown.Converter();
     let convertedHtml = converter.makeHtml(contents)
+    // let contentHtml=
+    // `
+    // <div class='contents-popup'>
+    //     <div class='contents' id='${id}' onscroll='scroll()'>
+    //         <a class='x' id='${id + '_button'}' onClick='switcher(this.id,true)'>close</a>`
+    //         + convertedHtml + `
+    //     </div>
+    // </div>
+    // `
+
     let contentHtml=
     `
-    <div class='contents-popup'>
-        <div class='contents' id='${id}' onscroll='scroll()'>
-            <a class='x' id='${id + '_button'}' onClick='switcher(this.id,true)'>close</a>`
-            + convertedHtml + `
-        </div>
+    <div class='contents' id='${id}' onscroll='scroll()'>
+        <a class='x' id='${id + '_button'}' onClick='switcher(this.id,true)'>close</a>`
+        + convertedHtml + `
     </div>
     `
-    return contentHtml;
+
+    let x = document.createElement('div'); 
+    x.className = 'contents-popup';
+    x.innerHTML = contentHtml;
+
+    document.getElementById('container-contents').appendChild(x);
+    // return contentHtml;
 }
 
 // controls content popup
@@ -204,7 +220,7 @@ function switcher(id){
             if(document.getElementById(contentId)){
                 document.getElementById(contentId).style.display = 'inline';
                 document.getElementById(contentId).style.overflowY='scroll';
-                document.body.style.overflow='hidden';
+                document.body.style.overflowY='hidden';
                 location.hash = '#popup-open';
             }
         }
