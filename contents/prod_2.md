@@ -9,11 +9,9 @@ flipcard.io
 
 - Development: Hojoong Chung
 - Logo/UI Design: Hojoong Chung
-- Year: 2018 
+- Year: 2018 (currently closed)
 - Front-end: Javascript
 - Back-end: Nodejs, Express, MongoDB, Docker, Amazone Lightsail
-
-(the domain flipcard.io has been closed)
 
 For more information, please visit the following websites: 
 [github](https://github.com/hodgoong/flipcard)
