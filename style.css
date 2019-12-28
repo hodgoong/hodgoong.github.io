@@ -206,4 +206,9 @@ svg:hover > a {
     #title.container-fluid > a.subtext {
         display: none;
     }
+
+    #menu.container-fluid {
+        text-align: center;
+        padding-right: 0;
+    }
   }
