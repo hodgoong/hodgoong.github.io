@@ -2,10 +2,10 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-a:link { color: black; TEXT-DECORATION: none; font-weight: normal }
-a:visited { color: black; TEXT-DECORATION: none; font-weight: normal }
-a:active { color: black; TEXT-DECORATION: none }
-a:hover { color: green; TEXT-DECORATION: none; font-weight: none }
+a:link { color: lightgray; TEXT-DECORATION: none; font-weight: normal }
+a:visited { color: lightgray; TEXT-DECORATION: none; font-weight: normal }
+a:active { color: lightgray; TEXT-DECORATION: none }
+a:hover { color: darkorange; TEXT-DECORATION: none; font-weight: none }
 
 .small-font{
     font-size:11px;
