@@ -12,9 +12,9 @@ Project Owl
 - Programming Language: C#
 - Related Platforms: Microsoft Kinect SDK, Grasshopper
 
-[![Project Owl](https://img.youtube.com/vi/N_5byI1DN18/0.jpg)](https://www.youtube.com/watch?v=N_5byI1DN18)
+This tool allows user to 3D scan using the Microsoft Kinect V2 sensor in Grasshopper environment. The tool was developed while I was doing my Master's degree in Germany. The tool has been used in various research and prototyping activities.
 
 For more information, please visit the following websites: 
-[github](https://github.com/hodgoong/grasshopper-kinect2)
+[github](https://github.com/hodgoong/grasshopper-kinect2), [youtube](https://www.youtube.com/watch?v=N_5byI1DN18)
 
 Project Owl © 2015 Hojoong Chung
