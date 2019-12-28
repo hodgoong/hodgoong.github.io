@@ -90,7 +90,7 @@ function exportHtml(data, fileName) {
         // document.getElementById('container-contents').appendChild(contentHtml);
     }
     else if(arrByLines.length == 3){
-        html = createCard(arrByLines[0], arrByLines[1], createCard[2], cardId);
+        html = createCard(arrByLines[0], arrByLines[1], arrByLines[2], cardId);
     }
     else if(arrByLines.length == 2){
         html = createCard(arrByLines[0],arrByLines[1], '', cardId);

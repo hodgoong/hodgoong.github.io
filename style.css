@@ -48,7 +48,8 @@ svg{
     position:fixed;
     background-color:rgba(255, 255, 255, 0.90);
     top:0;
-    height: 50px;
+    height: 60px;
+    padding: 6px;
     font-size: 36px;
     text-align: center;
     letter-spacing: 0;
@@ -58,7 +59,7 @@ svg{
 #menu.container-fluid{
     position:fixed;
     background-color:rgba(255, 255, 255, 0.90);
-    top:50px;
+    top:60px;
     height: 30px;
     text-align: right;
     padding-right: 6vw;
@@ -69,7 +70,7 @@ svg{
 }
 
 #spacer {
-    height:20px;
+    height:30px;
 }
 
 #main.container-fluid{
