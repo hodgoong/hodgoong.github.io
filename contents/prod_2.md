@@ -13,6 +13,10 @@ flipcard.io
 - Front-end: Javascript
 - Back-end: Nodejs, Express, MongoDB, Docker, Amazone Lightsail
 
+![Sign-in View](https://github.com/hodgoong/flipcard/raw/master/public/img/flipcard_capture.PNG)
+![Index Card View](https://github.com/hodgoong/flipcard/raw/master/public/img/flipcard_capture2.PNG)
+![Card List View](https://github.com/hodgoong/flipcard/raw/master/public/img/flipcard_capture3.PNG)
+
 For more information, please visit the following websites: 
 [github](https://github.com/hodgoong/flipcard)
 
