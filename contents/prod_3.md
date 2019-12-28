@@ -1,5 +1,5 @@
 Project Owl
-https://hojoongchung.files.wordpress.com/2015/10/capture.png?w=1320&h=614
+https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/project_owl.png
 Kinect V2 pointcloud generator for Grasshopper
 
 Project Owl
