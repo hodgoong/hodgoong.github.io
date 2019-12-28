@@ -199,3 +199,11 @@ body {
 svg:hover > a {
     fill: lightgray;
     }
+
+
+/* Responsive Setting */
+@media only screen and (max-width: 450px) {
+    #title.container-fluid > a.subtext {
+        display: none;
+    }
+  }
