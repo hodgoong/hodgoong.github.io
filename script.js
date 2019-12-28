@@ -80,7 +80,7 @@ function exportHtml(data, fileName) {
 
         //collect rest of the lines to use it as a 
         //main content for the popup window when clicked 
-        arrByLines.splice(0,2);
+        arrByLines.splice(0,3);
         let txtLines = '';
         arrByLines.forEach(function(line){
             txtLines += line + '\n';
