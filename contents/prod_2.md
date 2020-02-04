@@ -15,7 +15,7 @@ flipcard.io
 
 This tool was developed to help people memorizing words and it's meaning. While living in Germany, I wanted to use effective methodology for the purpose of studying German, and memorizing the vocabulary was critical.
 
-![Index Card View](https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture2.PNG =250x)
+![Index Card View](https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture2.PNG)
 
 For more information, please visit the following websites: 
 [github](https://github.com/hodgoong/flipcard)
