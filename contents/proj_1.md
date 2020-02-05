@@ -5,10 +5,14 @@ First of a kind irregular shaped building utilized complex BIM system
 National Museum of Qatar (Project Code: NMoQ)
 ===
 
-**A Built Dessert Rose**
+**A Built Desert Rose**
 
 - Title: Project Consultant
 - Employer: Gehry Technologies
 - Duration: DEC 2012 - SEP 2013 (10 months)
 - Programming Language: C#
-- Roles and Responsibilities: BIM coordination meeting setup, Coordination/Approval process development and implementation, Automation tool development
+
+Roles and Responsibilities: 
+- BIM coordination meeting setup and lead
+- Coordination/Approval process and system development and implementation
+- Tool developments, including **Issue Manager** which dramatically increased the coordination process productivity
