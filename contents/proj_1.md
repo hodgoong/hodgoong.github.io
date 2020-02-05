@@ -10,9 +10,8 @@ National Museum of Qatar (Project Code: NMoQ)
 - Title: Project Consultant
 - Employer: Gehry Technologies
 - Duration: DEC 2012 - SEP 2013 (10 months)
-- Programming Language: C#
 
-Roles and Responsibilities: 
+*Roles and Responsibilities:*
 - BIM coordination meeting setup and lead
 - Coordination/Approval process and system development and implementation
 - Tool developments, including **Issue Manager** which dramatically increased the coordination process productivity
