@@ -5,7 +5,7 @@ Book Translation (co-translated)
 Co-translation of BIM Handbook (Second Edition)
 ===
 
-**BIM Handbook, A Guide to Building Information. Modeling for Owners, Managers,. Designers, Engineers, and Contractors **
+**BIM Handbook, A Guide to Building Information. Modeling for Owners, Managers,. Designers, Engineers, and Contractors**
 
 - Original Authors: Chuck Eastman, Paul Teicholz, Rafael Sacks, Kathleen Liston
 - Co-translators: Ghang Lee, Hyunjoon Moon, Soonwook Kwon, Jaemin Lee, Junha Kim, Jingook Lee, Sungil Ham, Hoonsig Kang, Myoungseok Choi, Jiyong Jeong, Hojoong Chung
