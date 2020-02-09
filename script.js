@@ -115,7 +115,6 @@ function loadMarkdown(fileName){
                 }
 
                 //fileName is an id for the HTML card and content element
-
                 let html = exportHtml(xhr.responseText, fileName);
                 if(fileName.endsWith('.md')){
                     fileName = fileName.replace('.md','');
@@ -123,17 +122,24 @@ function loadMarkdown(fileName){
 
                 let x = document.createElement('div'); 
                 x.id = fileName;
+                x.className = 'card-container';
                 x.innerHTML = html;
 
+                let tag = document.createElement('div');
+
                 if(fileName.startsWith('prod_')){
-                    document.getElementById('products').appendChild(x);
+                    tag.className = 'tag tag-prod';
+                    tag.innerHTML = 'product';
+                } else if(fileName.startsWith('proj_')){
+                    tag.className = "tag tag-proj";
+                    tag.innerHTML = 'project';
+                } else if(fileName.startsWith('pub_')){
+                    tag.className = "tag tag-pub";
+                    tag.innerHTML = 'publication';
                 }
-                else if(fileName.startsWith('proj_')){
-                    document.getElementById('projects').appendChild(x);
-                }
-                else if(fileName.startsWith('pub_')){
-                    document.getElementById('publications').appendChild(x);
-                }
+
+                x.appendChild(tag);
+                document.getElementById('products').appendChild(x);
             }
         }
     }

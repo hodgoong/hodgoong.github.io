@@ -11,7 +11,6 @@ a:hover { color: darkorange; TEXT-DECORATION: none; font-weight: none }
     font-size:11px;
 }
 
-
 html{
     position: relative;
     min-height: 100%;
@@ -85,6 +84,12 @@ body {
 }
 
 /* cards */
+.card-container{
+    position:relative;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
 .microcard {
     cursor:hand;
     cursor: -webkit-hand;
@@ -98,7 +103,10 @@ body {
     border-radius: 3px;
     margin-bottom: 6px;
     overflow: hidden;
-    box-shadow: 0px 0px 20px 0px lightgray;
+}
+
+.microcard:hover {
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
 }
 
 .microcard-text {
@@ -143,6 +151,30 @@ body {
     vertical-align: middle;
 }
 
+.tag {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 4px;
+    margin-left: 4px;
+    padding: 2px;
+    font-size: 10px;
+    color: white;
+    border-radius: 3px;
+}
+
+.tag-prod {
+    background-color: lightcoral;
+}
+
+.tag-proj {
+    background-color: rgb(82, 105, 236);
+}
+
+.tag-pub {
+    background-color: lightseagreen;
+}
+
 .contents-popup > .contents{
     position:fixed;
     padding:10%;
@@ -172,8 +204,7 @@ body {
     cursor: hand;
 }
 
-#footer {
-    position: fixed;
+footer {
     font-size: 10px;
     bottom:0;
     left: 0;
@@ -182,6 +213,8 @@ body {
     text-align: center;
     overflow: hidden;
 }
+
+
 
 /* Animations */
 
@@ -198,7 +231,7 @@ body {
     }
 
 svg:hover > a {
-    fill: lightgray;
+    fill: gray;
     }
 
 
