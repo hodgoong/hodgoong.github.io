@@ -186,7 +186,7 @@ body {
     display:none;
     width: 100vw;
     height: 100vh;
-    background-color:rgba(255,255,255,0.8); 
+    background-color:rgba(255,255,255,0.95); 
     color:black;
     overflow-y:scroll;
     -webkit-overflow-scrolling: touch;
