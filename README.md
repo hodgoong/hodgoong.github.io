@@ -1,4 +1,4 @@
-# hodgoong.github.io
+# Content Management System based on MD files
 
 This project started to build a container for my personal works. It had two main criteria when building the product:
 
