@@ -11,5 +11,4 @@ Co-translation of BIM Handbook (Second Edition)
 - Co-translators: Ghang Lee, Hyunjoon Moon, Soonwook Kwon, Jaemin Lee, Junha Kim, Jingook Lee, Sungil Ham, Hoonsig Kang, Myoungseok Choi, Jiyong Jeong, Hojoong Chung
 - ISBN: 9788955922868
 - Pages: 598
-
-I've translated Chapter 3 'Interoperability' part.
+- Tanslated Chapter 3 'Interoperability'.
