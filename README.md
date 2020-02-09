@@ -1,6 +1,6 @@
 # Content Management System based on MD files
 
-This project started to build a container for my personal works. It had two main criteria when building the product:
+This project started to build a container for my personal works. It had two main criterias when designing the product:
 
 1. The contents should be easily created/updated/modified
 2. The contents should be created/stored file based
