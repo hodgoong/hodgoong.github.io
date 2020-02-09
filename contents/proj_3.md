@@ -1,5 +1,5 @@
 ITECH Pavilion 2015-16
-https://icd.uni-stuttgart.de/wp-content/gallery/RP15-Final/Final_08.jpg
+https://icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Final/Final_08.jpg
 Project participated during the masters study @Uni Stuttgart
 
 ITECH Pavilion(ICD-ITKE Research Pavilion) 2015-16
