@@ -1,4 +1,4 @@
-Project Management Handbook (2020)
+Project Management Handbook
 https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/project_management_handbook.png
 Book co-authored in Korean
 
@@ -7,6 +7,7 @@ Book co-authored in Korean
 
 ## Summary
 - **Authors:** Namkee Chung(정남기), Hojoong Chung(정호중))
+- **Year:** 2020
 - **ISBN:** 9791190048804
 - **Pages:** 199
 - **Publisher:** AURUM (도서출판 아우룸)
