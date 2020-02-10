@@ -9,4 +9,7 @@ With this reason, this tool utilizes Markdown as a content source and be able to
 
 https://hodgoong.github.io
 
-© 2020 Hojoong Chung
+
+
+
+hodgoong.github.io © 2020 Hojoong Chung
