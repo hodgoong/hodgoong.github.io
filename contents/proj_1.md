@@ -6,7 +6,7 @@ A first of a kind building that utilized state of the art BIM collaboration syst
 "A first of a kind irregular shaped, complex, multi-stakeholders, mega construction project that utilized state of the art BIM collaboration system"
 
 ## Summary
-- **Site Address:**
+- **Site Address:** Museum Park St, Doha, Qatar
 - **Employer:** Gehry Technologies
 - **Client:** Hyundai E&C
 - **Project Duration:** DEC 2012 - SEP 2013 (10 months on-site)
