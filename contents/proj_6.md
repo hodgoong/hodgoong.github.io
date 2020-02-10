@@ -3,12 +3,13 @@ https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/im
 JavaScript based 3D product information description
 
 # Script-based Product Description
-#### "Using modern programming language for describing/sharing/visualizing the product information"
+> "Using modern programming language for describing/sharing/visualizing the product information"
 
 ## Summary
-- Employee:  @BIM.5D, STRABAG/Ed. Züblin AG
+- Employer:  @BIM.5D, STRABAG/Ed. Züblin AG
 - Developer: Hojoong Chung, Gene Kao
-- Role: Research and Development
+- Language: JavaScript
+- Used Techs: nodejs, three.js
 - Year: 2017
 
 ## Purpose
