@@ -11,8 +11,11 @@ A 3-cut web cartoon published on Tapastic
 - **Year:** 2014-2017
 
 ## Description
-### Why 3-cut web cartoon?
+**Why 3-cut web cartoon?**
 This web cartoon was designed to provide simple but elegance fun to the readers, while designed to use minimal efforts for the production utilizing efficient/fast workflow. For these reasons, the story I want to deliver has been extremely abstracted into 3 cuts.
 
-### Why VENI, VIDI, VICI?
+**Why VENI, VIDI, VICI?**
 It simply shows the situation of the scene in the first cut(VENI), providing some more detailed explanation in the second(VIDI), and then finally gives the fun part when finish reading the cartoon(VICI).
+
+
+![VENI, VIDI, VICI Ep.18](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/veni_vidi_vici_ep18.png)
