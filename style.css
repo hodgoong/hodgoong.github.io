@@ -2,10 +2,10 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-a:link { color: lightgray; TEXT-DECORATION: none; font-weight: normal }
-a:visited { color: lightgray; TEXT-DECORATION: none; font-weight: normal }
-a:active { color: lightgray; TEXT-DECORATION: none }
-a:hover { color: darkorange; TEXT-DECORATION: none; font-weight: none }
+a:link { color: lightcoral;; TEXT-DECORATION: none; font-weight: normal }
+a:visited { color: lightcoral;; TEXT-DECORATION: none; font-weight: normal }
+a:active { color: lightcoral;; TEXT-DECORATION: none }
+a:hover { color: coral; TEXT-DECORATION: none; font-weight: none }
 
 .small-font{
     font-size:11px;
@@ -198,12 +198,14 @@ body {
     position:fixed;
     top:10px;
     right:3%;
-    background-color:rgba(255,255,255,0.15);
     font-size:28px;
-    border-style:solid;
-    border-width:1px;
     cursor: -webkit-hand;
     cursor: hand;
+    color: lightcoral;
+}
+
+.contents > .x:hover{
+    color: coral;
 }
 
 footer {

@@ -205,7 +205,7 @@ function createContent(contents, id){
     let contentHtml=
     `
     <div class='contents' id='${id}' onscroll='scroll()'>
-        <a class='x' id='${id + '_button'}' onClick='switcher(this.id,true)'>close</a>`
+        <a class='x' id='${id + '_button'}' onClick='switcher(this.id,true)'>X</a>`
         + convertedHtml + `
     </div>
     `
