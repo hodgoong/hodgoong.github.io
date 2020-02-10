@@ -2,16 +2,15 @@ flipcard.io
 https://github.com/hodgoong/flipcard/raw/master/public/img/flipcard_logo.png
 Index card web app for vocabulary study
 
-flipcard.io
-===
+# flipcard.io
+"An index card web-app to help users memorizing foreign words"
 
-**Index card web app for vocabulary study**
-
-- Development: Hojoong Chung
-- Logo/UI Design: Hojoong Chung
-- Year: 2018 (currently closed)
-- Front-end: Javascript
-- Back-end: Nodejs, Express, MongoDB, Docker, Amazone Lightsail
+## Summary
+- **Developer:** Hojoong Chung
+- **Logo/UI Design:** Hojoong Chung
+- **Year:** 2018 (currently closed)
+- **Front-end:** Javascript
+- **Back-end:** Nodejs, Express, MongoDB, Docker, Amazon Lightsail
 
 This tool was developed to help people memorizing words and it's meaning. While living in Germany, I wanted to use effective methodology for the purpose of studying German, and memorizing the vocabulary was critical.
 

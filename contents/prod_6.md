@@ -9,6 +9,13 @@ BIM Issue Management System built by STRABAG/Ed.Zueblin
 - **Developer:** Hojoong Chung, Gene Kao, Dawit, Matthias, 
 - **Employer:** STRABAG/Ed.Zueblin AG
 - **Project Duration:** 2017 - 2018 (3 versions have developed; prototype, single-project(v1), multi-project(v2))
+- **Programming Languages:** JavaScript, C#
+- **Used Techs:** NodeJS, Express, MongoDB, Docker, GitLab(for CI/CD and code versioning)
 
 ## Roles and Responsibilities:
-- Development lead
+- Development lead from concept to production
+- Developed concept prototype and promoted to the BIM managers
+- Developed single-project version(v1) for project called "Zug HQ" in 2017
+- Led five colleagues for the development of multi-project version(v2) implementing agile methodology(Scrum) and deployed to the whole company using internal IT infrastructure in 2018
+
+Clash Management System © 2018 STRABAG/Ed.Zueblin

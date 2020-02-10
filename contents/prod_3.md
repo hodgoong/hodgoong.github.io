@@ -1,17 +1,18 @@
 Project Owl
 https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/project_owl.png
-Kinect V2 pointcloud generator for Grasshopper
+A Grasshopper component to communicate with MS Kinect V2 to generate 3D pointclouds
 
-Project Owl
-===
+# Project Owl
+"Kinect V2 pointcloud generator for GA Grasshopper component to communicate with MS Kinect V2 to generate 3D pointclouds"
 
-**Kinect V2 pointcloud generator for Grasshopper**
+## Summary
+- **Developer:** Hojoong Chung
+- **Icon Design:** Hojoong Chung
+- **Year:** 2015
+- **Programming Language:** C#
+- **Related Platforms:** Microsoft Kinect SDK, Grasshopper
 
-- Development: Hojoong Chung
-- Year: 2015
-- Programming Language: C#
-- Related Platforms: Microsoft Kinect SDK, Grasshopper
-
+## Description
 This tool allows user to 3D scan using the Microsoft Kinect V2 sensor in Grasshopper environment. The tool was developed while I was doing my Master's degree in Germany. The tool has been used in various research and prototyping activities.
 
 For more information, please visit the following websites: 
