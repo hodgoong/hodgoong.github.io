@@ -194,7 +194,7 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-.contents > .x{
+.contents > .x {
     position:fixed;
     top:10px;
     right:3%;
@@ -204,12 +204,13 @@ body {
     color: lightcoral;
 }
 
-.contents > .x:hover{
+.contents > .x:hover {
     color: coral;
 }
 
-.contents > img{
-    max-width: 50%  
+.contents > img {
+    display: inline-block;
+    max-width: 50%
 }
 
 footer {
@@ -221,8 +222,6 @@ footer {
     text-align: center;
     overflow: hidden;
 }
-
-
 
 /* Animations */
 
