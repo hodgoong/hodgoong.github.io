@@ -12,4 +12,4 @@ https://hodgoong.github.io
 
 
 
-hodgoong.github.io © 2020 Hojoong Chung
+© 2020 Hojoong Chung
