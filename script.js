@@ -1,8 +1,13 @@
 let folderRootUrl = 'https://api.github.com/repos/hodgoong/hodgoong.github.io/git/trees/master';
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     alert("Ready!");
-// }, false);
+/**
+ * To close the content popup when ESC key is pressed. Handle ESC key (key code 27)
+ */
+// document.addEventListener('keyup', function(e) {
+//     if (e.keyCode === 27 && location.hash === 'popup-open') {
+//         switcher(this.id);
+//     }
+// });
 
 (init())();
 
@@ -11,50 +16,17 @@ function init(){
         location.hash=''
     }
     readFolder(folderRootUrl, searchTree);
-
 }
 
-// Handle ESC key (key code 27)
-// document.addEventListener('keyup', function(e) {
-//     if (e.keyCode === 27 && location.hash === 'popup-open') {
-//         switcher(this.id);
-//     }
-// });
-
-function makeHashDefault(){
-    console.log('hi');
-    if(location.hash !== ''){
-        location.hash='';
-    }
-}
-
+/**
+ * To search the folder structure of 'contents' folder in the github repo
+ * @param {string} res - HTTP response
+ */
 function searchTree(res){
     JSON.parse(res).tree.forEach(function(item){
         if(item.path === 'contents'){
-            // console.log(item.url);
-            // console.log('diving into contents folder....');
-            // console.log('===============================');
-
             readFolder(item.url, function(res){
-                // let counts = {
-                //     prod: 0,
-                //     proj: 0,
-                //     pub: 0,
-                //     max: function(){
-                //         return Math.max(this.prod, this.proj, this.pub);
-                //     }
-                // }
-
                 JSON.parse(res).tree.forEach(function(item){
-                    // if(item.path.startsWith('prod_')){
-                    //     counts.prod += 1;
-                    // }
-                    // else if(item.path.startsWith('proj_')){
-                    //     counts.proj += 1;
-                    // }
-                    // else if(item.path.startsWith('pub_')){
-                    //     counts.pub += 1;
-                    // }
                     loadMarkdown(item.path);
                 });
             });
@@ -62,6 +34,12 @@ function searchTree(res){
     });
 }
 
+/**
+ * To identify how many lines that loaded markdown has,
+ * and create contents popup or not based on it
+ * @param {*} data - loaded makrdown data
+ * @param {*} fileName - markdown file name
+ */
 function exportHtml(data, fileName) {
     let html = '';
     let cardId = 'cardId_' + fileName;
@@ -85,9 +63,7 @@ function exportHtml(data, fileName) {
         arrByLines.forEach(function(line){
             txtLines += line + '\n';
         })
-        // html += createContent(txtLines, contentId);
         createContent(txtLines, contentId);
-        // document.getElementById('container-contents').appendChild(contentHtml);
     }
     else if(arrByLines.length == 3){
         html = createCard(arrByLines[0], arrByLines[1], arrByLines[2], cardId);
@@ -102,6 +78,10 @@ function exportHtml(data, fileName) {
     return html;
 }
 
+/**
+ * To load markdown and append the output HTML to the index.html
+ * @param {string} fileName - markdown file name stored in the github repo
+ */
 function loadMarkdown(fileName){
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://hodgoong.github.io/contents/' + fileName, true);
@@ -145,7 +125,11 @@ function loadMarkdown(fileName){
     }
 }
 
-// read github folder structure
+/**
+ * To read folder structure of github repo
+ * @param {string} url - url to the github repo
+ * @param {string} fn - callback function
+ */
 function readFolder(url, fn){
     let xhr = new XMLHttpRequest();
     xhr.open('GET', url , true);
@@ -160,17 +144,13 @@ function readFolder(url, fn){
     }
 }
 
-function createDummyCard(num){
-    let x = document.createElement('div'); 
-    x.className ='dummycard';
-
-    for(i=0; i<num; i++){
-        document.getElementById('products').appendChild(x);
-        document.getElementById('projects').appendChild(x);
-        document.getElementById('publications').appendChild(x);
-    }
-}
-
+/**
+ * Create HTML for the card displayed on the main page
+ * @param {string} title - card title
+ * @param {string} img - url indicating image file location
+ * @param {string} desc - content description displayed on the card
+ * @param {string} id - card id
+ */
 function createCard(title, img='', desc='', id){
     let cardHtml =         
     `
@@ -188,20 +168,14 @@ function createCard(title, img='', desc='', id){
     return cardHtml;
 }
 
-// creates content(hidden as default) html
+/**
+ * Create HTML for the contents displayed when card is clicked
+ * @param {string} contents - contents described in markdown format
+ * @param {string} id - card id
+ */
 function createContent(contents, id){
     let converter = new showdown.Converter();
     let convertedHtml = converter.makeHtml(contents)
-    // let contentHtml=
-    // `
-    // <div class='contents-popup'>
-    //     <div class='contents' id='${id}' onscroll='scroll()'>
-    //         <a class='x' id='${id + '_button'}' onClick='switcher(this.id,true)'>close</a>`
-    //         + convertedHtml + `
-    //     </div>
-    // </div>
-    // `
-
     let contentHtml=
     `
     <div class='contents' id='${id}' onscroll='scroll()'>
@@ -215,10 +189,12 @@ function createContent(contents, id){
     x.innerHTML = contentHtml;
 
     document.getElementById('container-contents').appendChild(x);
-    // return contentHtml;
 }
 
-// controls content popup
+/**
+ * Change the web-browser hash to identify shown-hidden state of the content popup
+ * @param {string} id - card id
+ */
 function switcher(id){
     if(location.hash !== '#popup-open'){
         if(id.startsWith('cardId_')){
