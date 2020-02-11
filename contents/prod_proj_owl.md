@@ -3,7 +3,7 @@ https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/im
 A Grasshopper component to communicate with MS Kinect V2 to generate 3D pointclouds
 
 # Project Owl
-"Kinect V2 pointcloud generator for GA Grasshopper component to communicate with MS Kinect V2 to generate 3D pointclouds"
+"A Grasshopper component to communicate with MS Kinect V2 to generate 3D pointclouds"
 
 ## Summary
 - **Developer:** Hojoong Chung
