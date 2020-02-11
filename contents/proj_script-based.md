@@ -21,9 +21,10 @@ The purpose of this project was to try out the modern programming language as a 
 4. The file format is natively web service compatible
 
 ## Screenshots
-![Sample Model 1](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/img_script-based/scriptbase.png)
+![Sample Model 1](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/img_script-based/ldac2017.png)
 ![Sample Model 2](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/img_script-based/scriptbase2.png)
 
 ## Photos
-![Presenting the idea at the LDAC 2017](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/img_script-based/ldac2017.png)
+![Presenting the idea at the LDAC 2017](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/img_script-based/scriptbase.png)
+
 Presenting the idea at the Linked Data in Architecture and Construction(LDAC) 2017 with Gene Kao @Dijon, France
