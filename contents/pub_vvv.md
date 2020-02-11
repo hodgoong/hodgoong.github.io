@@ -5,12 +5,12 @@ A 3-cut web cartoon published on Tapastic
 # VENI, VIDI, VICI
 "You see, you understand, and you laugh"
 
-## Summary
+### Summary
 - **Stories and Drawings:** Hojoong Chung
 - **Total Episodes:** 27
 - **Year:** 2014-2017
 
-## Description
+### Description
 **Why 3-cut web cartoon?**
 This web cartoon was designed to provide simple but elegance fun to the readers, while designed to use minimal efforts for the production utilizing efficient/fast workflow. For these reasons, the story I want to deliver has been extremely abstracted into 3 cuts.
 

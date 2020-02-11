@@ -5,14 +5,14 @@ A Grasshopper component to communicate with MS Kinect V2 to generate 3D pointclo
 # Project Owl
 "A Grasshopper component to communicate with MS Kinect V2 to generate 3D pointclouds"
 
-## Summary
+### Summary
 - **Developer:** Hojoong Chung
 - **Icon Design:** Hojoong Chung
 - **Year:** 2015
 - **Programming Language:** C#
 - **Related Platforms:** Microsoft Kinect SDK, Grasshopper
 
-## Description
+### Description
 This tool allows user to 3D scan using the Microsoft Kinect V2 sensor in Grasshopper environment. The tool was developed while I was doing my Master's degree in Germany. The tool has been used in various research and prototyping activities.
 
 For more information, please visit the following websites: 

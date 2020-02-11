@@ -50,11 +50,13 @@ function exportHtml(data, fileName) {
     }
 
     let arrByLines = data.split('\n');
+    let arrTitle = arrByLines[0];
+    let arrImgURL = arrByLines[1];
+    let arrDesc = arrByLines[2];
     
     //collect first two lines and use it for the preview
     if(arrByLines.length >= 4){
-        //input: title, image URL, description, id
-        html = createCard(arrByLines[0], arrByLines[1], arrByLines[2], cardId)
+        html = createCard(arrTitle, arrImgURL, arrDesc, cardId)
 
         //collect rest of the lines to use it as a 
         //main content for the popup window when clicked 
@@ -63,16 +65,16 @@ function exportHtml(data, fileName) {
         arrByLines.forEach(function(line){
             txtLines += line + '\n';
         })
-        createContent(txtLines, contentId);
+        createContent(txtLines, contentId, arrImgURL);
     }
     else if(arrByLines.length == 3){
-        html = createCard(arrByLines[0], arrByLines[1], arrByLines[2], cardId);
+        html = createCard(arrTitle, arrImgURL, arrDesc, cardId);
     }
     else if(arrByLines.length == 2){
-        html = createCard(arrByLines[0],arrByLines[1], '', cardId);
+        html = createCard(arrTitle,arrImgURL, '', cardId);
     }
     else{
-        html = createCard(arrByLines[0],'', '', cardId);
+        html = createCard(arrTitle,'', '', cardId);
     }
         
     return html;
@@ -173,14 +175,19 @@ function createCard(title, img='', desc='', id){
  * @param {string} contents - contents described in markdown format
  * @param {string} id - card id
  */
-function createContent(contents, id){
+function createContent(contents, id, img){
     let converter = new showdown.Converter();
     let convertedHtml = converter.makeHtml(contents)
     let contentHtml=
     `
     <div class='contents' id='${id}' onscroll='scroll()'>
-        <a class='x' id='${id + '_button'}' onClick='switcher(this.id,true)'>X</a>`
-        + convertedHtml + `
+        <div class='contents-header'>
+            <img src='${img}'>
+        </div>
+        <a class='x' id='${id + '_button'}' onClick='switcher(this.id,true)'>X</a>
+        <div class='contents-body'>
+            `+ convertedHtml + `
+        </div>
     </div>
     `
 
