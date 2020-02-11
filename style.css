@@ -200,6 +200,7 @@ body {
     cursor: -webkit-hand;
     cursor: hand;
     color: lightcoral;
+    z-index: 3;
 }
 
 .contents > .x:hover {
@@ -276,9 +277,21 @@ svg:hover > a {
 
     #menu.container-fluid {
         display: none;
+        height: 0px;
     }
 
     .contents-header {
-        height: 150px;
+        display: none;
+        height: 0;
     }
+
+    body {
+        top: 40px;
+    }
+
+    .contents > .x {
+        right: 7%;
+    }
+
+
   }
