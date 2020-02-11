@@ -1,4 +1,4 @@
-# Content Management System based on MD files
+# Portfolio website based on self-made markdown based content management system
 
 This project started to build a container for my personal works. It had two main criterias when designing the product:
 
