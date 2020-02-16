@@ -175,6 +175,10 @@ body {
     background-color: lightseagreen;
 }
 
+.tag-rnd{
+    background-color:rgb(145, 123, 0);
+}
+
 .contents-popup > .contents {
     position:fixed;
     padding: 4% 5% 4% 5%;

@@ -119,6 +119,10 @@ function loadMarkdown(fileName){
                     tag.className = "tag tag-pub";
                     tag.innerHTML = 'publication';
                 }
+                else if(fileName.startsWith('rnd_')){
+                    tag.className = "tag tag-rnd";
+                    tag.innerHTML = 'research';
+                }
 
                 x.appendChild(tag);
                 document.getElementById('products').appendChild(x);
