@@ -8,6 +8,7 @@ A competition with 5 other cities to get selected for the next round
 ### Summary
 - **Site Address:** Museum Park St, Doha, Qatar
 - **Employer:** Entrue Consulting (LG CNS)
+- **Team Member:** Jongsung Park, Hojoong Chung
 - **Project Consortium:** Daejeon Metropolitan Government, LG CNS, CNCITY Energy, Parking Cloud, J&D Inc., Frugal Solution Inc., InSpace Inc., Yeonmu Tech., Airpoint, Jungdo UIT 
 - **Project Duration:** MAY 2019 - FEB 2020
 
@@ -18,3 +19,6 @@ A competition with 5 other cities to get selected for the next round
 - 1st phase deliverables collection and economical/environmental effects estimation
 - Strategic 2nd phase planning and economical/environmental effects estimation
 - In charged of 1st and 2nd phase report authoring
+
+For more information, please visit the following websites: 
+[news](http://www.newsis.com/view/?id=NISX20200216_0000920238)
