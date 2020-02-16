@@ -9,6 +9,7 @@ A 3-cut web cartoon published on Tapastic
 - **Stories and Drawings:** Hojoong Chung
 - **Total Episodes:** 27
 - **Year:** 2014-2017
+- **Publication:** Tapastic(https://tapas.io/series/VENI-VIDI-VICI)
 
 ### Description
 **Why 3-cut web cartoon?**
