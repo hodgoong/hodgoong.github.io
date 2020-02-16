@@ -297,5 +297,9 @@ svg:hover > a {
         right: 7%;
     }
 
+    .card-container{
+        width: 360px;
+    }
+
 
   }
