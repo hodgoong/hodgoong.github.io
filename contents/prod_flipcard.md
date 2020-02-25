@@ -18,16 +18,13 @@ This tool was developed to help people memorizing words and it's meaning. While 
 To see the video sample, please click to links below:
 
 [web-version(YouTube)](https://youtu.be/ub6HW-C3xjU)
-
 [mobile-version(GIF)](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/public/contents/mov/flipcard_mov.gif)
 
 
 ### Screenshots
 
 ![Sign-Up/In View](https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture.PNG)
-
 ![Index Card View](https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture2.PNG)
-
 ![Card Management View](https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture3.PNG)
 
 
