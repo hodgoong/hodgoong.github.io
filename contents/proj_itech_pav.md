@@ -17,7 +17,7 @@ Project participated during the masters study @Uni Stuttgart
 ### Project Participants
 - **Project Professors:** Prof. Achim Menges, Prof. Jan Knippers
 - **Project Tutors:** Simon Bechert, Oliver David Krieg, Tobias Schwinn, Daniel Sonntag
-- **Project Participants:** Martin Alvarez, Jan Brütting, Sean Campbell, Mariia Chumak, Hojoong Chung, Joshua Few, Eliane Herter, Rebecca Jaroszewski, Ting-Chun Kao, Dongil Kim, Kuan-Ting Lai, Seojoo Lee, Riccardo Manitta, Erik Martinez, Artyom Maxim, Masih Imani Nia, Andres Obregon, Luigi Olivieri, Thu Nguyen Phuoc, Giuseppe Pultrone, Jasmin Sadegh, Jenny Shen, Michael Sveiven, Julian Wengzinek, and Alexander Wolkow
+- **Project Participants:** Martin Alvarez, Jan Brütting, Sean Campbell, Mariia Chumak, **Hojoong Chung**, Joshua Few, Eliane Herter, Rebecca Jaroszewski, Ting-Chun Kao, Dongil Kim, Kuan-Ting Lai, Seojoo Lee, Riccardo Manitta, Erik Martinez, Artyom Maxim, Masih Imani Nia, Andres Obregon, Luigi Olivieri, Thu Nguyen Phuoc, Giuseppe Pultrone, Jasmin Sadegh, Jenny Shen, Michael Sveiven, Julian Wengzinek, and Alexander Wolkow
 - **Technical Supports:** Long Nguyen, Michael Preisack, and Lauren Vasey
 
 ### Roles and Responsibilities
@@ -25,3 +25,16 @@ Project participated during the masters study @Uni Stuttgart
 - Data-exchange automation tool development
 - Assembly sequence study and implementation plan development
 - Robot production process optimization with LEAN/TOC concept
+
+### Photos
+
+![ITECH Pavilion 2015-16 photo 1](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Final/Final_01.jpg)
+![ITECH Pavilion 2015-16 photo 2](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Final/Final_11.jpg)
+![ITECH Pavilion 2015-16 photo 3](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Final/Final_02.jpg)
+![ITECH Pavilion 2015-16 photo 3](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Process/Process_06.jpg)
+![ITECH Pavilion 2015-16 photo 3](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Process/Process_08.jpg)
+![ITECH Pavilion 2015-16 photo 3](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Process/Process_10.jpg)
+![ITECH Pavilion 2015-16 photo 3](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Process/Process_12.jpg)
+![ITECH Pavilion 2015-16 photo 3](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Process/Process_15.jpg)
+![ITECH Pavilion 2015-16 photo 3](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Process/Process_16.jpg)
+![ITECH Pavilion 2015-16 photo 3](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Process/Process_17.jpg)

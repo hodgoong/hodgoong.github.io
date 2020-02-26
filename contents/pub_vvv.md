@@ -19,7 +19,6 @@ This web cartoon was designed to provide simple but elegance fun to the readers,
 It simply shows the situation of the scene in the first cut(VENI), providing some more detailed explanation in the second(VIDI), and then finally gives the fun part when finish reading the cartoon(VICI).
 
 ### Sample Episodes
-
 ![VENI, VIDI, VICI Ep.5](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/img_vvv/VVV_5.jpg)
 ![VENI, VIDI, VICI Ep.7](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/img_vvv/VVV_7.jpg)
 ![VENI, VIDI, VICI Ep.21](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/img_vvv/VVV_21.jpg)

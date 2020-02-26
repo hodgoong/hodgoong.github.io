@@ -19,6 +19,13 @@ After spending two consecutive weekends, developing the first working MVP on the
 
 The firehopper provides simple components for Grasshopper to get connected to Google's Firebase. The plug-in includes basic components like 'GET', 'PUT', 'PATCH', 'POST', 'DELETE', and 'Key-value pair generator' to support HTTP communication and meta-data sharing. 
 
+### Screenshots
+
+![Screenshot 1](https://static.food4rhino.com/s3fs-public/styles/large/public/users-files/hojoong-chung/app/firehopper_example_sequencial.png?itok=tgK1rihD)
+![Screenshot 2](https://static.food4rhino.com/s3fs-public/users-files/hojoong-chung/app/firehopper_example_script_sharing.png)
+![Screenshot 3](https://static.food4rhino.com/s3fs-public/users-files/hojoong-chung/app/firehopper_example_sphere.png)
+
+
 For more information, please visit the following websites: 
 [github](https://github.com/hodgoong/firehopper), [food4rhino](https://www.food4rhino.com/app/firehopper)
 

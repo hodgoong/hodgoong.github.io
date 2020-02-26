@@ -20,4 +20,8 @@ BIM Issue Management System built by STRABAG/Ed.Zueblin
 - Developed single-project version(v1) for project called "Zug HQ" in 2017
 - Led five colleagues for the development of multi-project version(v2) implementing agile methodology(Scrum) and deployed to the whole company using internal IT infrastructure in 2018
 
+### Photos
+![Presenting the tool in front of colleagues](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/cms_presentation.jpg)
+
+
 Clash Management System © 2018 STRABAG/Ed.Zueblin

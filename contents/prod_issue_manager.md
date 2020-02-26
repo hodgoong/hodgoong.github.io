@@ -17,4 +17,10 @@ BIM Issue Management System built by Gehry Technologies for NMoQ
 - Programmed a tool to generate unique identification number for the BIM model submission which has been integrated into the Issue Manager later
 - Implemented the tool in the project setting standard workflows, communication protocols. Authored all those in one manual and trained the coordinators and managers to nudge them to utilize the 3D coordination models
 
+### Screenshots
+
+![Issue Manager](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/issue_manager_2013)
+![Issue Manager 2](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/issue_manager_2013_2)
+
+
 Issue Manager © 2013 Gehry Technologies
