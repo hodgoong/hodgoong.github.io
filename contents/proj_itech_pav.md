@@ -27,7 +27,6 @@ Project participated during the masters study @Uni Stuttgart
 - Robot production process optimization with LEAN/TOC concept
 
 ### Photos
-
 ![ITECH Pavilion 2015-16 photo 1](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Final/Final_01.jpg)
 ![ITECH Pavilion 2015-16 photo 2](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Final/Final_11.jpg)
 ![ITECH Pavilion 2015-16 photo 3](https://www.icd.uni-stuttgart.de/img/wp-content/gallery/RP15-Final/Final_02.jpg)

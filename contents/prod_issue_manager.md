@@ -18,8 +18,12 @@ BIM Issue Management System built by Gehry Technologies for NMoQ
 - Implemented the tool in the project setting standard workflows, communication protocols. Authored all those in one manual and trained the coordinators and managers to nudge them to utilize the 3D coordination models
 
 ### Screenshots
+![Issue Manager Prototype](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/issue_manager_2013_prototype.png)
+![Issue Manager UI](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/issue_manager_2013_U.png)
 ![Issue Manager](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/issue_manager_2013.jpg)
 ![Issue Manager 2](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/issue_manager_2013_2.png)
-![Issue Manager UI](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/issue_manager_2013_UI.png)
+![Issue Manager Report](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/issue_manager_2013_report.png)
+![Issue Manager Stats](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/issue_manager_2013_stats.png)
+
 
 Issue Manager © 2013 Gehry Technologies

@@ -22,7 +22,6 @@ To see the video sample, please click to links below:
 
 
 ### Screenshots
-
 ![Sign-Up/In View](https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture.PNG)
 ![Index Card View](https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture2.PNG)
 ![Card Management View](https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture3.PNG)
