@@ -18,7 +18,7 @@ This tool was developed to help people memorizing words and it's meaning. While 
 To see the video sample, please click to links below:
 
 [web-version(YouTube)](https://youtu.be/ub6HW-C3xjU)
-[mobile-version(GIF)](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/public/contents/mov/flipcard_mov.gif)
+[mobile-version(GIF)](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/mov/flipcard/flipcard_mobile.gif)
 
 
 ### Screenshots
@@ -29,6 +29,6 @@ To see the video sample, please click to links below:
 
 
 For more information, please visit the following websites: 
-[github](https://github.com/hodgoong/flipcard)
+[GitHub](https://github.com/hodgoong/flipcard)
 
 flipcard.io © 2018 Hojoong Chung
