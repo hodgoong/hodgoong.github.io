@@ -111,6 +111,10 @@ body {
     border-color: gray;
 }
 
+.microcard:hover > .microcard-img {
+    opacity: 100%;
+}
+
 .microcard-text {
     position: relative;
     text-align: left;
@@ -140,7 +144,11 @@ body {
     height: 70%;
     overflow: hidden;
     display: inline-block;
+    opacity: 30%;
 }
+
+
+
 
 .microcard-img > img {
     position: absolute;

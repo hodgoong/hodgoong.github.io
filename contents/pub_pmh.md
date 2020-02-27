@@ -15,3 +15,6 @@ Book co-authored in Korean
 
 ### Roles and Responsibilities
 - Wrote mainly, but not only, the Chapter 6. Integrating Waterfall with Agile (6. 폭포수 모형과 애자일 모형의 융합)
+
+### Book Cover
+![Project Management Handbook Book Cover](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/project_management_handbook.png)
