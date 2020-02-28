@@ -214,14 +214,14 @@ function switcher(id){
     if(id.startsWith('cardId_')){
         hashAddress = id.replace('cardId_','');
         contentId = id.replace('cardId_','contentId_');
-        gtag('config', 'UA-154366933-1', {'page_path': '/' + hashAddress});
+        gtag('config', gaID, {'page_path': '/' + hashAddress});
     }
 
     // when X is clicked
     if(id.startsWith('contentId_') && id.endsWith('_button')){
         hashAddress = '#' + id.replace('_button','').replace('contentId_','');
         contentId = id.replace('_button','');
-        gtag('config', 'UA-154366933-1', {'page_path': '/'});
+        gtag('config', gaID, {'page_path': '/'});
     }
 
     // when the card is clicked
