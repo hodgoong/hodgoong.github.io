@@ -160,7 +160,7 @@ function readFolder(url, fn){
 function createCard(title, img='', desc='', id){
     let cardHtml =         
     `
-    <div class='microcard' id=${id} onClick='switcher(this.id, false)'>
+    <div class='microcard' id=${id} onClick='switcher(this.id)'>
         <div class='microcard-img'>
             <img src='${img}'>
         </div>
@@ -188,7 +188,7 @@ function createContent(contents, id, img){
         <div class='contents-header'>
             <img src='${img}'>
         </div>
-        <a class='x' id='${id + '_button'}' onClick='switcher(this.id,true)'>X</a>
+        <a class='x' id='${id + '_button'}' onClick='switcher(this.id)'>X</a>
         <div class='contents-body'>
             `+ convertedHtml + `
         </div>
@@ -207,27 +207,39 @@ function createContent(contents, id, img){
  * @param {string} id - card id
  */
 function switcher(id){
-    if(location.hash !== '#popup-open'){
-        if(id.startsWith('cardId_')){
-            let contentId = id.replace('cardId_','contentId_');
-            if(document.getElementById(contentId)){
-                document.getElementById(contentId).style.display = 'inline';
-                document.getElementById(contentId).style.overflowY='scroll';
-                document.body.style.overflowY='hidden';
-                location.hash = '#popup-open';
-            }
-        }
+    let hashAddress = '';
+    let contentId = '';
+
+    // when the card is clicked
+    if(id.startsWith('cardId_')){
+        hashAddress = id.replace('cardId_','');
+        contentId = id.replace('cardId_','contentId_');
+        gtag('config', 'UA-154366933-1', {'page_path': '/' + hashAddress});
     }
-    
-    if(location.hash === '#popup-open'){
-        if(id.startsWith('contentId_') && id.endsWith('_button')){
-            let contentId = id.replace('_button','');
-            if(document.getElementById(contentId)){
-                document.getElementById(contentId).style.display = 'none';
-                document.getElementById(contentId).style.overflowY='hidden';
-                document.body.style.overflow='initial';
-                location.hash = '';
-            }
+
+    // when X is clicked
+    if(id.startsWith('contentId_') && id.endsWith('_button')){
+        hashAddress = '#' + id.replace('_button','').replace('contentId_','');
+        contentId = id.replace('_button','');
+        gtag('config', 'UA-154366933-1', {'page_path': '/'});
+    }
+
+    // when the card is clicked
+    if(location.hash !== hashAddress){
+        if(document.getElementById(contentId)){
+            document.getElementById(contentId).style.display = 'inline';
+            document.getElementById(contentId).style.overflowY='scroll';
+            document.body.style.overflowY='hidden';
+            location.hash = hashAddress;
+        }
+    } 
+    // when X is clicked
+    else if (location.hash === hashAddress){
+        if(document.getElementById(contentId)){
+            document.getElementById(contentId).style.display = 'none';
+            document.getElementById(contentId).style.overflowY='hidden';
+            document.body.style.overflow='initial';
+            location.hash = '';
         }
     }
 }
