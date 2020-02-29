@@ -14,7 +14,7 @@ A first of a kind building that utilized state of the art BIM collaboration syst
 ### Roles and Responsibilities:
 - BIM coordination meeting setup and lead as an interior trade coordination lead
 - BIM coordination/BIM model submission/Approval process and supporting system development/implementation
-- Tool developments, including **Issue Manager** which dramatically increased the coordination process productivity. It made possible to manage more than 5,000 clashes and 5,000 RFIs created  in the project efficiently, and decreased the time spent to generate clash reports from 3 days to 3 hours.
+- Tool developments, including **Issue Manager** which dramatically increased the coordination process productivity. It made possible to manage more than 5,000 clashes and 5,000 RFIs created in the project efficiently, and decreased the time spent to generate clash reports from 3 days to 3 hours.
 
 ### Photos
 ![NMoQ photo 1](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/nmoq_photo_1.png)
