@@ -1,8 +1,8 @@
-Daejeon Smartcity Challenge
+Daejeon Smart City Challenge
 https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/daejeon_smarcity_challenge.png
 A competition with 5 other cities to get selected for the next round
 
-# Daejeon Smartcity Challenge (Phase 1)
+# Daejeon Smart City Challenge (Phase 1)
 "A competition with 5 other cities to get selected for the next round"
 
 ### Summary
