@@ -8,8 +8,7 @@ BIM Issue Management System built by STRABAG/Ed.Zueblin
 ### Summary
 - **Employer:** STRABAG/Ed.Zueblin AG
 - **Project Duration:** 2017 - 2018 (3 versions have developed; prototype, single-project(v1), multi-project(v2))
-- **Development:** Hojoong Chung, Gene Kao, Dawit Ghebrehiwet, Matthias Rätzke
-, Julian Wengzinek
+- **Development:** Hojoong Chung, Gene Kao, Dawit Ghebrehiwet, Matthias Rätzke, Julian Wengzinek
 - **Logo Design:** Julian Wengzinek
 - **Programming Languages:** JavaScript, C#
 - **Used Techs:** NodeJS, Express, MongoDB, Docker, GitLab(for CI/CD and code versioning)
