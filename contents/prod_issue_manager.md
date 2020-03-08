@@ -7,8 +7,12 @@ BIM Issue Management System built by Gehry Technologies for NMoQ
 
 ### Summary
 - **Employer:** Gehry Technologies
-- **Project Duration:** 2017 - 2018
-- **Development:** Daniel Dias, Hojoong Chung, Ahmed R. Abdelmeguid, Wassim Boutros
+- **Development Period:** 2013
+- **Concept Development:** Daniel Dias
+- **Prototype Development:** Hojoong Chung
+- **Report Generation Development:** Wassim Boutros
+- **Core Development:** Ahmed R. Abdelmeguid
+- **Workflow Implementation:** Hojoong Chung
 - **Programming Language:** Visual Basic
 - **Used Techs:** CATIA V5
 

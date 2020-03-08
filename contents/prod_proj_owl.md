@@ -16,8 +16,9 @@ A Grasshopper component to communicate with MS Kinect V2 to generate 3D pointclo
 This tool allows user to 3D scan using the Microsoft Kinect V2 sensor in Grasshopper environment. The tool was developed while I was doing my Master's degree in Germany. The tool has been used in various research and prototyping activities.
 
 ### Screenshots
-![Sign-Up/In View](https://hojoongchung.files.wordpress.com/2015/09/capture.png?w=660)
-
+![Screenshot 1](https://hojoongchung.files.wordpress.com/2015/09/capture.png?w=660)
+![Screenshot 2](https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/project_owl.png)
+![Screenshot 3](https://i.ytimg.com/vi/N_5byI1DN18/maxresdefault.jpg)
 
 For more information, please visit the following websites: 
 [github](https://github.com/hodgoong/grasshopper-kinect2), [youtube](https://www.youtube.com/watch?v=N_5byI1DN18)

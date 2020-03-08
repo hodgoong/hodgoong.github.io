@@ -15,3 +15,6 @@ Book co-translated to Korean
 
 ### Roles and Responsibilities
 - Tanslated Chapter 3 'Interoperability'.
+
+### Book Cover
+![BIM Handbook Book Cover](http://image.yes24.com/momo/TopCate329/MidCate006/32856162(1).jpg)
