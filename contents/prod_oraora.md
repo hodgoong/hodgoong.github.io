@@ -1,5 +1,5 @@
 oraora
-https://github.com/hodgoong/youtube-together/raw/master/Design/oraora_appicon_appstore.png
+https://raw.githubusercontent.com/hodgoong/hodgoong.github.io/master/contents/img/oraora_logo.png
 An iOS app that enables you to watch YouTube together with others
 
 # oraora
