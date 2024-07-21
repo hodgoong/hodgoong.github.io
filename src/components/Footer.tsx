@@ -3,9 +3,7 @@ export default function Footer() {
         <footer className="footer bg-neutral text-neutral-content p-10">
             <aside>
                 <p>
-                    hojoongchung.com
-                    <br />
-                    blah blah
+                    
                 </p>
             </aside>
             <nav>

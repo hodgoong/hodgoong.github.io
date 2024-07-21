@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html data-theme="cupcake" lang="en">
+    <html data-theme="dark" lang="en">
       {/* <body className={inter.className}>{children}</body> */}
       <body className="flex flex-col mb-auto items-center justify-between">
         <Navbar navBarSource={navBarSource} />
