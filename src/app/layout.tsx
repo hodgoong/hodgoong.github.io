@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className="flex flex-col mb-auto items-center justify-between">
         <Navbar navBarSource={navBarSource} />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

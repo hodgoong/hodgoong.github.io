@@ -41,10 +41,14 @@ const dummyInputs: CardSource[] = [
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
-      {
-        dummyInputs.map((input => <Card key={input.id} cardSource={input} />))
-      }
-    </main >
+    <main className="flex flex-col mb-auto items-center justify-between p-24">
+    Works Page - Under Construction
+    {/* <Button text={'test'}/> */}
+</main >
+    // <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
+    //   {
+    //     dummyInputs.map((input => <Card key={input.id} cardSource={input} />))
+    //   }
+    // </main >
   );
 }
