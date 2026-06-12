@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hojoong Chung — Principal Solution Architect</title>
+  <meta name="description" content="Principal Solution Architect with 10+ years of enterprise technical delivery across APAC and EMEA. Currently building AI and LLM-powered solutions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav__brand" aria-label="Hojoong Chung home">HC</a>
+    <ul class="nav__links" role="list">
+      <li><a href="#work"    class="nav__link">Work</a></li>
+      <li><a href="#about"   class="nav__link">About</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
+      <li><a href="cv.html"  class="nav__link">CV</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="https://github.com/hodgoong" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="GitHub profile">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </a>
+      <a href="mailto:hodgoong@gmail.com" class="nav__icon" aria-label="Send email">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18">
+          <path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" aria-labelledby="hero-name">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Seoul, Korea</p>
+      <h1 class="hero__name" id="hero-name">Hojoong Chung</h1>
+      <p class="hero__role">Principal Solution Architect</p>
+      <p class="hero__tagline">
+        10+ years building enterprise systems that work — from computational architecture
+        to AI chatbots. I find the root business problem before proposing a solution.
+      </p>
+      <div class="hero__stats" role="list">
+        <div class="hero__stat" role="listitem">
+          <span class="hero__stat-value">28×</span>
+          <span class="hero__stat-label">Consulting revenue growth</span>
+        </div>
+        <div class="hero__stat" role="listitem">
+          <span class="hero__stat-value">$30M</span>
+          <span class="hero__stat-label">Project managed</span>
+        </div>
+        <div class="hero__stat" role="listitem">
+          <span class="hero__stat-value">10+</span>
+          <span class="hero__stat-label">Years enterprise delivery</span>
+        </div>
+        <div class="hero__stat" role="listitem">
+          <span class="hero__stat-value">APAC</span>
+          <span class="hero__stat-label">Regional focus</span>
+        </div>
+      </div>
+      <div class="hero__badges" aria-label="Certifications">
+        <span class="badge">AWS AI Practitioner</span>
+        <span class="badge">TOGAF Certified</span>
+        <span class="badge">PSM1</span>
+        <span class="badge">Bilingual KO / EN</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WORK ── -->
+  <section id="work" class="section" aria-labelledby="work-heading">
+    <div class="section__inner">
+      <header class="section__header">
+        <p class="section__label">Selected work</p>
+        <h2 class="section__title" id="work-heading">Products, Projects &amp; Research</h2>
+      </header>
+
+      <div class="work-sort" role="group" aria-label="Sort work by">
+        <span class="work-sort__label">Sort</span>
+        <button class="work-sort__btn is-active" data-sort="date">Date</button>
+        <button class="work-sort__btn" data-sort="type">Type</button>
+        <button class="work-sort__btn" data-sort="alpha">A–Z</button>
+      </div>
+
+      <div class="work-grid" id="work-grid">
+
+        <!-- ITECH Pavilion -->
+        <article class="portfolio-card" data-project-id="itech-pavilion" role="button" tabindex="0" aria-label="Open ITECH Pavilion details">
+          <a href="#" class="case-study-card-hover__link" tabindex="-1" aria-hidden="true">
+            <img
+              src="../v1/contents/img/img_itech_pav/ICD-ITKE_RP15-16_Image_001.jpg"
+              alt="ITECH Pavilion exterior view"
+              class="case-study-card-hover__image"
+              loading="lazy" width="800" height="533">
+            <div class="case-study-card-hover__overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Research · Computational Design · 2015–16</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--research">Research</span>
+            <h3 class="portfolio-card__title">ITECH Pavilion 2015–16</h3>
+            <p class="portfolio-card__desc">ArchDaily Building of the Year 2017. Robotic fabrication research at Uni Stuttgart.</p>
+          </div>
+        </article>
+
+        <!-- Clash Management System -->
+        <article class="portfolio-card" data-project-id="cms" role="button" tabindex="0" aria-label="Open Clash Management System details">
+          <a href="#" class="case-study-card-hover__link" tabindex="-1" aria-hidden="true">
+            <img
+              src="../v1/contents/img/strabag_clash_management_2018_2.png"
+              alt="Strabag Clash Management System UI"
+              class="case-study-card-hover__image"
+              loading="lazy" width="800" height="533">
+            <div class="case-study-card-hover__overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Product · Node.js / MongoDB / Docker · 2017–18</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--product">Product</span>
+            <h3 class="portfolio-card__title">Clash Management System</h3>
+            <p class="portfolio-card__desc">Multi-project BIM issue management — built and shipped at STRABAG/Ed.Züblin.</p>
+          </div>
+        </article>
+
+        <!-- NMoQ Issue Manager -->
+        <article class="portfolio-card" data-project-id="issue-manager" role="button" tabindex="0" aria-label="Open NMoQ Issue Manager details">
+          <a href="#" class="case-study-card-hover__link" tabindex="-1" aria-hidden="true">
+            <img
+              src="../v1/contents/img/issue_manager_2013.jpg"
+              alt="NMoQ Issue Manager interface"
+              class="case-study-card-hover__image"
+              loading="lazy" width="800" height="533">
+            <div class="case-study-card-hover__overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Product · VBA / CATIA V5 · 2013</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--product">Product</span>
+            <h3 class="portfolio-card__title">NMoQ Issue Manager</h3>
+            <p class="portfolio-card__desc">Reduced clash report generation from 3 days to 3 hours at the National Museum of Qatar.</p>
+          </div>
+        </article>
+
+        <!-- Daejeon Smart City -->
+        <article class="portfolio-card" data-project-id="dsc" role="button" tabindex="0" aria-label="Open Daejeon Smart City Challenge details">
+          <a href="#" class="case-study-card-hover__link" tabindex="-1" aria-hidden="true">
+            <img
+              src="../v1/contents/img/daejeon_smarcity_challenge.png"
+              alt="Daejeon Smart City Challenge overview"
+              class="case-study-card-hover__image"
+              loading="lazy" width="800" height="533">
+            <div class="case-study-card-hover__overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Project · Smart City · 2019–20</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--project">Project</span>
+            <h3 class="portfolio-card__title">Daejeon Smart City Challenge</h3>
+            <p class="portfolio-card__desc">Strategic consulting that secured $10M Phase 2 funding for the smart city data hub.</p>
+          </div>
+        </article>
+
+        <!-- Robotic Light Sculpture -->
+        <article class="portfolio-card" data-project-id="rls" role="button" tabindex="0" aria-label="Open Robotic Light Sculpture details">
+          <a href="#" class="case-study-card-hover__link" tabindex="-1" aria-hidden="true">
+            <img
+              src="../v1/contents/img/img_robotic_light/RLS_1.png"
+              alt="Robotic Light Sculpture"
+              class="case-study-card-hover__image"
+              loading="lazy" width="800" height="533">
+            <div class="case-study-card-hover__overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Research · Robotics / Kinect V2 · 2014</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--research">Research</span>
+            <h3 class="portfolio-card__title">Robotic Light Sculpture</h3>
+            <p class="portfolio-card__desc">Industrial robot path generation via Kinect V2 point cloud and pathfinding algorithms.</p>
+          </div>
+        </article>
+
+        <!-- Script-based Product Description -->
+        <article class="portfolio-card" data-project-id="script-based" role="button" tabindex="0" aria-label="Open Script-based Product Description details">
+          <a href="#" class="case-study-card-hover__link" tabindex="-1" aria-hidden="true">
+            <img
+              src="../v1/contents/img/img_script-based/scriptbase2.png"
+              alt="Script-based product description visualization"
+              class="case-study-card-hover__image"
+              loading="lazy" width="800" height="533">
+            <div class="case-study-card-hover__overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Research · BIM / JavaScript · 2017</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--research">Research</span>
+            <h3 class="portfolio-card__title">Script-based Product Description</h3>
+            <p class="portfolio-card__desc">Using JavaScript as a 3D product format. Presented at LDAC 2017, Dijon, France.</p>
+          </div>
+        </article>
+
+        <!-- National Museum of Qatar -->
+        <article class="portfolio-card" data-project-id="nmoq" role="button" tabindex="0" aria-label="Open National Museum of Qatar details">
+          <a href="#" class="case-study-card-hover__link" tabindex="-1" aria-hidden="true">
+            <img
+              src="../v1/contents/img/nmoq_photo_1.png"
+              alt="National Museum of Qatar exterior"
+              class="case-study-card-hover__image"
+              loading="lazy" width="800" height="533">
+            <div class="case-study-card-hover__overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Project · BIM Coordination · 2012–13</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--project">Project</span>
+            <h3 class="portfolio-card__title">National Museum of Qatar</h3>
+            <p class="portfolio-card__desc">10 months on-site BIM coordination lead. Managed 5,000+ clashes and 5,000+ RFIs.</p>
+          </div>
+        </article>
+
+        <!-- firehopper -->
+        <article class="portfolio-card" data-project-id="firehopper" role="button" tabindex="0" aria-label="Open firehopper details">
+          <a href="#" class="case-study-card-hover__link" tabindex="-1" aria-hidden="true">
+            <img
+              src="https://github.com/hodgoong/firehopper/raw/master/firehopper_logo.jpg"
+              alt="firehopper logo"
+              class="case-study-card-hover__image"
+              loading="lazy" width="800" height="533">
+            <div class="case-study-card-hover__overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Product · C# / Firebase / Grasshopper · 2018</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--product">Product</span>
+            <h3 class="portfolio-card__title">firehopper</h3>
+            <p class="portfolio-card__desc">Open-source Grasshopper ↔ Firebase plugin. Built in two weekends after flux.io shut down.</p>
+          </div>
+        </article>
+
+        <!-- Project Owl -->
+        <article class="portfolio-card" data-project-id="project-owl" role="button" tabindex="0" aria-label="Open Project Owl details">
+          <a href="#" class="case-study-card-hover__link" tabindex="-1" aria-hidden="true">
+            <img
+              src="../v1/contents/img/project_owl.png"
+              alt="Project Owl Grasshopper component"
+              class="case-study-card-hover__image"
+              loading="lazy" width="800" height="533">
+            <div class="case-study-card-hover__overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Product · C# / Kinect SDK / Grasshopper · 2015</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--product">Product</span>
+            <h3 class="portfolio-card__title">Project Owl</h3>
+            <p class="portfolio-card__desc">Grasshopper component for live 3D scanning via Microsoft Kinect V2. Used in Robotic Light Sculpture.</p>
+          </div>
+        </article>
+
+        <!-- flipcard.io -->
+        <article class="portfolio-card" data-project-id="flipcard" role="button" tabindex="0" aria-label="Open flipcard.io details">
+          <a href="#" class="case-study-card-hover__link" tabindex="-1" aria-hidden="true">
+            <img
+              src="https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture.PNG"
+              alt="flipcard.io index card view"
+              class="case-study-card-hover__image"
+              loading="lazy" width="800" height="533">
+            <div class="case-study-card-hover__overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Product · Node.js / MongoDB / Docker · 2018</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--product">Product</span>
+            <h3 class="portfolio-card__title">flipcard.io</h3>
+            <p class="portfolio-card__desc">Full-stack vocabulary flashcard web app — solo built and deployed on AWS Lightsail.</p>
+          </div>
+        </article>
+
+        <!-- AI Chatbot for Samsung DS -->
+        <article class="portfolio-card" data-project-id="ai-chatbot" role="button" tabindex="0" aria-label="Open AI Chatbot for Samsung DS details">
+          <div class="portfolio-card__visual">
+            <div class="portfolio-card__visual-overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Product · Claude / Amazon Bedrock · 2024–25</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="portfolio-card__visual-stack">Claude · Amazon Bedrock<br>APS · Python · Multi-agent</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--product">Product</span>
+            <h3 class="portfolio-card__title">AI Chatbot for Samsung DS</h3>
+            <p class="portfolio-card__desc">Claude + Bedrock chatbot querying ~2,000 daily Revit files. Presented at Autodesk University 2025.</p>
+          </div>
+        </article>
+
+        <!-- Cloud Adoption for Samsung DS FAB -->
+        <article class="portfolio-card" data-project-id="acc-fab" role="button" tabindex="0" aria-label="Open Cloud Adoption for Samsung DS FAB details">
+          <div class="portfolio-card__visual">
+            <div class="portfolio-card__visual-overlay" aria-hidden="true">
+              <div class="case-study-card-hover__content">
+                <h3 class="case-study-card-hover__category">Project · ACC · Autodesk Forma · 2023–24</h3>
+                <div class="case-study-card-hover__cta">
+                  <span class="case-study-card-hover__cta-label">View Details</span>
+                  <svg class="case-study-card-hover__cta-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="portfolio-card__visual-stack">Autodesk Construction Cloud<br>Autodesk Forma · AWS · SSO</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <span class="portfolio-card__tag portfolio-card__tag--project">Project</span>
+            <h3 class="portfolio-card__title">Cloud Adoption for Samsung DS FAB</h3>
+            <p class="portfolio-card__desc">ACC &amp; Forma deployment with custom SSO inside a high-security semiconductor fab. Presented at AU 2024.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACHIEVEMENT SPOTLIGHT ── -->
+  <section class="testimonial-full-bleed" aria-label="Career highlight">
+    <div class="testimonial-full-bleed__mark" aria-hidden="true">"</div>
+    <div class="testimonial-full-bleed__body">
+      <blockquote class="testimonial-full-bleed__quote">
+        <p>Scaled regional consulting from $183K to $5.3M — a 28× growth — by identifying platform integration gaps, delivering technical training, and securing $1.9M in follow-on investment.</p>
+      </blockquote>
+      <div class="testimonial-full-bleed__attribution">
+        <div class="testimonial-full-bleed__author">
+          <span class="testimonial-full-bleed__name">Hojoong Chung</span>
+          <span class="testimonial-full-bleed__role">Principal Solution Architect, Autodesk APAC · 2022–Present</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section section--muted" aria-labelledby="about-heading">
+    <div class="section__inner">
+      <header class="section__header">
+        <p class="section__label">Background</p>
+        <h2 class="section__title" id="about-heading">About</h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-bio">
+          <p class="about-bio__text">
+            Principal Solution Architect with 10+ years of enterprise technical delivery across the globe,
+            currently expanding into applied AI and LLM-powered solutions. Led the design and prototype of
+            a Claude-powered AI Chatbot for Samsung Electronics DS, presented at Autodesk University 2025.
+          </p>
+          <p class="about-bio__text">
+            Known for ramping quickly on new domains and cutting through complexity to identify the root
+            business problem before proposing solutions. Strong foundation in enterprise architecture,
+            data engineering, and customer-facing technical advisory.
+          </p>
+          <p class="about-bio__text">
+            TOGAF-certified Enterprise Architect. AWS Certified AI Practitioner. M.Sc from University
+            of Stuttgart, B.Arch from Yonsei University. Bilingual Korean / English.
+          </p>
+          <nav class="about-bio__links" aria-label="Social links">
+            <a href="https://github.com/hodgoong" target="_blank" rel="noopener noreferrer" class="text-link">GitHub →</a>
+            <a href="https://hojoongchung.wordpress.com" target="_blank" rel="noopener noreferrer" class="text-link">Blog →</a>
+            <a href="mailto:hodgoong@gmail.com" class="text-link">Email →</a>
+          </nav>
+        </div>
+
+        <div class="about-details">
+          <section class="services-index-list" aria-labelledby="comp-heading">
+            <div class="services-index-list__label">
+              <h3 class="services-index-list__heading" id="comp-heading">Competencies</h3>
+            </div>
+            <ul class="services-index-list__items" role="list">
+              <li class="services-index-list__item"><span class="services-index-list__item-name">AI &amp; LLM Integration</span><svg class="services-index-list__item-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></li>
+              <li class="services-index-list__item"><span class="services-index-list__item-name">Enterprise Solution Architecture</span><svg class="services-index-list__item-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></li>
+              <li class="services-index-list__item"><span class="services-index-list__item-name">Cloud &amp; Data Engineering</span><svg class="services-index-list__item-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></li>
+              <li class="services-index-list__item"><span class="services-index-list__item-name">Technical Discovery &amp; Advisory</span><svg class="services-index-list__item-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></li>
+              <li class="services-index-list__item"><span class="services-index-list__item-name">Computational Design</span><svg class="services-index-list__item-arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></li>
+            </ul>
+          </section>
+
+          <section class="services-index-list" aria-labelledby="exp-heading">
+            <div class="services-index-list__label">
+              <h3 class="services-index-list__heading" id="exp-heading">Experience</h3>
+            </div>
+            <ul class="services-index-list__items" role="list">
+              <li class="services-index-list__item exp-item"><div class="exp-item__info"><span class="exp-item__company">Autodesk</span><span class="exp-item__role">Principal Solution Architect, APAC</span></div><span class="exp-item__period">2022–Present</span></li>
+              <li class="services-index-list__item exp-item"><div class="exp-item__info"><span class="exp-item__company">LG CNS</span><span class="exp-item__role">Consultant, Entrue Consulting</span></div><span class="exp-item__period">2019–2022</span></li>
+              <li class="services-index-list__item exp-item"><div class="exp-item__info"><span class="exp-item__company">Autodesk</span><span class="exp-item__role">Cloud Application Developer, EMEA</span></div><span class="exp-item__period">2018</span></li>
+              <li class="services-index-list__item exp-item"><div class="exp-item__info"><span class="exp-item__company">Ed. Züblin (STRABAG)</span><span class="exp-item__role">Project Engineer</span></div><span class="exp-item__period">2017–2018</span></li>
+              <li class="services-index-list__item exp-item"><div class="exp-item__info"><span class="exp-item__company">Gehry Technologies</span><span class="exp-item__role">Project Consultant</span></div><span class="exp-item__period">2012–2014</span></li>
+            </ul>
+          </section>
+
+          <section class="services-index-list" aria-labelledby="pub-heading">
+            <div class="services-index-list__label">
+              <h3 class="services-index-list__heading" id="pub-heading">Publications</h3>
+            </div>
+            <ul class="services-index-list__items" role="list">
+              <li class="services-index-list__item exp-item"><div class="exp-item__info"><span class="exp-item__company">Project Management Handbook</span><span class="exp-item__role">Co-authored</span></div><span class="exp-item__period">2020</span></li>
+              <li class="services-index-list__item exp-item"><div class="exp-item__info"><span class="exp-item__company">BIM Handbook (2nd Ed.)</span><span class="exp-item__role">Co-translated to Korean</span></div><span class="exp-item__period">2014</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LIGHTBOX ── -->
+  <div id="lightbox" class="lightbox" aria-modal="true" role="dialog" aria-label="Enlarged image" aria-hidden="true">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close image">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+        <path d="M1 1l12 12M13 1L1 13"/>
+      </svg>
+    </button>
+    <img id="lightbox-img" class="lightbox__img" src="" alt="">
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer id="contact" class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <p class="footer__copy">Designed &amp; coded by Hojoong Chung. All rights reserved 2019–2026.</p>
+      <nav class="footer__links" aria-label="Footer links">
+        <a href="https://github.com/hodgoong" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
+        <a href="https://hojoongchung.wordpress.com" target="_blank" rel="noopener noreferrer" class="footer__link">Blog</a>
+        <a href="mailto:hodgoong@gmail.com" class="footer__link">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ── DRAWER BACKDROP ── -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+
+  <!-- ── DETAIL DRAWER ── -->
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Project details">
+    <header class="drawer__header">
+      <button class="drawer__close" id="drawer-close" aria-label="Close project details">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 3l10 10M13 3L3 13"/>
+        </svg>
+      </button>
+    </header>
+    <div class="drawer__body" id="drawer-body" role="region" aria-live="polite"></div>
+  </aside>
+
+  <script>
+  (function () {
+    var IMG = '../v1/contents/img/';
+
+    var PROJECTS = {
+      'itech-pavilion': {
+        title: 'ITECH Pavilion 2015–16',
+        type: 'Research', typeClass: 'portfolio-card__tag--research',
+        period: '2015–16',
+        stack: 'Computational Design · Robotic Fabrication · Grasshopper',
+        org: 'ICD / ITKE, University of Stuttgart',
+        link: 'https://www.icd.uni-stuttgart.de/projects/icd-itke-research-pavilion-2015-16/',
+        linkLabel: 'View at ICD Stuttgart',
+        summary: 'ArchDaily Building of the Year 2017. A research pavilion built purely by masters students using design computation and robotic fabrication — 151 segments, 780 kg, 85 m², 9.3 m span.',
+        meta: [
+          { label: 'Site Area',   value: '85 m²' },
+          { label: 'Span',        value: '9.3 m' },
+          { label: 'Weight',      value: '780 kg (7.85 kg/m²)' },
+          { label: 'Award',       value: 'ArchDaily Building of the Year 2017' },
+          { label: 'Duration',    value: 'Oct 2014 – Apr 2016 (18 months)' },
+          { label: 'Fabrication', value: 'Robotic sewing of beech plywood strips' },
+        ],
+        body: [
+          'The pavilion consists of 151 prefabricated segments, each made from three individually laminated beech plywood strips. Textile connections developed for the project eliminate the need for metal fasteners, achieving a material thickness/span ratio of 1/1000 on average.',
+          'My roles included initial concept development, a data-exchange automation tool, assembly sequence planning, and robot production process optimisation using LEAN/TOC methodology.',
+        ],
+        images: [
+          IMG + 'img_itech_pav/ICD-ITKE_RP15-16_Image_001.jpg',
+          IMG + 'img_itech_pav/ICD-ITKE_RP15-16_Image_101.jpg',
+          IMG + 'img_itech_pav/ICD-ITKE_RP15-16_Image_104.jpg',
+          IMG + 'img_itech_pav/ICD-ITKE_RP15-16_Image_203.jpg',
+          IMG + 'img_itech_pav/ICD-ITKE_RP15-16_Process_003.jpg',
+          IMG + 'img_itech_pav/ICD-ITKE_RP15-16_Process_004.jpg',
+        ],
+      },
+
+      'cms': {
+        title: 'Clash Management System',
+        type: 'Product', typeClass: 'portfolio-card__tag--product',
+        period: '2017–18',
+        stack: 'Node.js · Express · MongoDB · Docker · GitLab CI/CD',
+        org: 'STRABAG / Ed. Züblin AG',
+        link: null,
+        summary: 'Multi-project, multi-user BIM issue management system with commenting and model-review add-ins. Three versions shipped: prototype, single-project v1, and a company-wide v2 deployed across Germany.',
+        meta: [
+          { label: 'Team',     value: '6 developers (Hojoong as lead)' },
+          { label: 'Stack',    value: 'Node.js, MongoDB, Docker' },
+          { label: 'Versions', value: 'Prototype → v1 (Zug HQ) → v2 (company-wide)' },
+          { label: 'CI/CD',    value: 'GitLab — first in the organisation' },
+        ],
+        body: [
+          'Initiated as a concept prototype and promoted internally to BIM managers. The single-project v1 was delivered for the "Zug HQ" project in 2017. I then led a team of five using Scrum to build the multi-project v2, deployed company-wide on internal IT infrastructure in 2018.',
+          'This was the organisation\'s first production Node.js application and its first CI/CD pipeline.',
+        ],
+        images: [
+          IMG + 'strabag_clash_management_2018_2.png',
+          IMG + 'cms_UI.png',
+          IMG + 'cms_presentation.jpg',
+        ],
+      },
+
+      'issue-manager': {
+        title: 'NMoQ Issue Manager',
+        type: 'Product', typeClass: 'portfolio-card__tag--product',
+        period: '2013',
+        stack: 'VBA · CATIA V5 · Excel',
+        org: 'Gehry Technologies — National Museum of Qatar (Hyundai E&C, $434M)',
+        link: null,
+        summary: 'BIM clash/RFI management and automatic report generation tool. Managed 5,000+ clashes and 5,000+ RFIs on a $434M project. Reduced report generation from 3 days to 3 hours.',
+        meta: [
+          { label: 'Clashes managed', value: '5,000+' },
+          { label: 'RFIs managed',    value: '5,000+' },
+          { label: 'Report time',     value: '3 days → 3 hours' },
+          { label: 'Client',          value: 'Hyundai E&C ($434M)' },
+        ],
+        body: [
+          'Programmed the initial prototype integrating Excel data with CATIA V5, generating issue spheres based on 3D camera view information. Later developed a unique ID generation tool integrated into the Issue Manager.',
+          'Implemented the tool into standard project workflows and communication protocols, authored the operations manual, and trained coordinators and managers.',
+        ],
+        images: [
+          IMG + 'issue_manager_2013.jpg',
+          IMG + 'issue_manager_2013_U.png',
+          IMG + 'issue_manager_2013_prototype.png',
+          IMG + 'issue_manager_2013_report.png',
+          IMG + 'issue_manager_2013_stats.png',
+        ],
+      },
+
+      'dsc': {
+        title: 'Daejeon Smart City Challenge',
+        type: 'Project', typeClass: 'portfolio-card__tag--project',
+        period: '2019–20',
+        stack: 'Strategic Consulting · Architecture Design · Feasibility Analysis',
+        org: 'LG CNS (Entrue Consulting) — Daejeon Metropolitan City',
+        link: 'http://www.newsis.com/view/?id=NISX20200216_0000920238',
+        linkLabel: 'Press coverage',
+        summary: 'Phase 1 of a national competition among 5 cities for smart city designation. Led strategic planning and authored Phase 1/2 reports — securing $10M in Phase 2 funding for Daejeon\'s smart city data hub.',
+        meta: [
+          { label: 'Consortium',   value: '10 organisations incl. Daejeon Metropolitan Gov.' },
+          { label: 'Outcome',      value: '$10M Phase 2 funding secured' },
+          { label: 'Duration',     value: 'May 2019 – Feb 2020' },
+          { label: 'My role',      value: 'PM, strategy consulting, report authoring' },
+        ],
+        body: [
+          'Led basic project management including schedule, milestones, communication channels, and reporting protocols. Chaired bi-weekly consortium meetings across 10 organisations.',
+          'Responsible for business feasibility, service process consulting, economic/environmental effects estimation for both phases, and authoring the Phase 1 and Phase 2 strategic reports.',
+        ],
+        images: [
+          IMG + 'daejeon_smarcity_challenge.png',
+        ],
+      },
+
+      'rls': {
+        title: 'Robotic Light Sculpture',
+        type: 'Research', typeClass: 'portfolio-card__tag--research',
+        period: '2014',
+        stack: 'Grasshopper · Kinect V2 · Industrial Robot · Three.js',
+        org: 'University of Stuttgart — with Gene Kao, Riccardo Manitta',
+        link: null,
+        summary: 'Light sculpture created by an industrial robot whose path was computed from a Kinect V2 body scan. The robot traces a pathfinding route through the 3D point cloud, leaving light drawings in long-exposure photography.',
+        meta: [
+          { label: 'Input',     value: 'Kinect V2 body scan → point cloud' },
+          { label: 'Algorithm', value: 'Pathfinding on 3D point cloud' },
+          { label: 'Tool',      value: 'Project Owl Grasshopper component' },
+          { label: 'Team',      value: 'Gene Kao, Riccardo Manitta, Hojoong Chung' },
+        ],
+        body: [
+          'Robot movements were generated by scanning a body using the Project Owl Grasshopper component and Kinect V2, then deriving the robot path from the resulting point cloud using a pathfinding algorithm.',
+          'The light attached to the robot end-effector traces that path through space. Long-exposure photography captures the resulting sculptural light drawing.',
+        ],
+        images: [
+          IMG + 'img_robotic_light/RLS_1.png',
+          IMG + 'img_robotic_light/RLS_2.png',
+          IMG + 'img_robotic_light/RLS_3.png',
+          IMG + 'img_robotic_light/RLS_4.png',
+          IMG + 'img_robotic_light/RLS_5.png',
+        ],
+      },
+
+      'ai-chatbot': {
+        title: 'AI Chatbot for Samsung DS',
+        type: 'Product', typeClass: 'portfolio-card__tag--product',
+        period: '2024–25',
+        stack: 'Claude · Amazon Bedrock · APS · Python · Multi-agent',
+        org: 'Autodesk APAC — Samsung Electronics DS',
+        link: 'https://www.autodesk.com/autodesk-university/class/Lessons-Learned-from-Developing-AI-Chatbot-for-Multibillion-Dollar-Semiconductor-Fabrication-Plants-2025',
+        linkLabel: 'Watch at Autodesk University 2025',
+        summary: 'Built an AI Chatbot using Claude on Amazon Bedrock and Autodesk Platform Services to extract insights from ~2,000 daily-updated Revit files in a semiconductor fab mega-project. Presented at Autodesk University 2025.',
+        meta: [
+          { label: 'Client',     value: 'Samsung Electronics DS' },
+          { label: 'Stack',      value: 'Claude · Amazon Bedrock · APS' },
+          { label: 'Scale',      value: '~2,000 daily-updated Revit files' },
+          { label: 'Presented',  value: 'Autodesk University 2025' },
+        ],
+        body: [
+          'Designed and prototyped an AI Chatbot that lets Samsung DS engineers query complex metadata from ~2,000 Revit files updated daily across a semiconductor fabrication mega-project. Built on Claude via Amazon Bedrock and Autodesk Platform Services (APS), with a multi-agent orchestration layer handling Text-to-SQL and context routing.',
+          'The core challenge was large-scale LLM data ingestion: extracting, chunking, and indexing BIM metadata from live Revit models without exceeding context limits. The session at AU 2025 shared key lessons on multi-agent design and ingestion strategy for mega-project data at this scale.',
+        ],
+        images: [],
+      },
+
+      'acc-fab': {
+        title: 'Cloud Adoption for Samsung DS FAB',
+        type: 'Project', typeClass: 'portfolio-card__tag--project',
+        period: '2023–24',
+        stack: 'Autodesk Construction Cloud · Autodesk Forma · AWS · Autodesk SSO',
+        org: 'Autodesk APAC — Samsung Electronics DS',
+        link: 'https://www.autodesk.com/autodesk-university/ko/class/Challenges-and-Solutions-Adopting-Autodesk-Construction-Cloud-for-Multibillion-Dollar-Semiconductor-Fabrication-Plants-2024',
+        linkLabel: 'Watch at Autodesk University 2024',
+        summary: 'Led the cloud adoption of Autodesk Construction Cloud and Forma for Samsung Electronics DS semiconductor fabrication plants — navigating national-level security regulations, custom SSO, and a transition from 2D document workflows to live 3D collaboration.',
+        meta: [
+          { label: 'Client',     value: 'Samsung Electronics DS' },
+          { label: 'Stack',      value: 'ACC · Autodesk Forma · AWS' },
+          { label: 'Challenge',  value: 'National security & strict compliance' },
+          { label: 'Presented',  value: 'Autodesk University 2024' },
+        ],
+        body: [
+          'Navigated strict national-security regulations to deploy Autodesk Construction Cloud and Forma within Samsung Electronics DS\'s highly secured private-cloud environment. Engineered multi-level security with custom Autodesk SSO and AWS identity-provider integration to meet compliance requirements without compromising workflow functionality.',
+          'Led the full transition from legacy 2D document workflows to live 3D collaboration, enabling URL-based 3D view sharing across cross-functional project teams. Presented the challenges and solutions at Autodesk University 2024 as a multi-year cloud adoption journey.',
+        ],
+        images: [],
+      },
+
+      'nmoq': {
+        title: 'National Museum of Qatar',
+        type: 'Project', typeClass: 'portfolio-card__tag--project',
+        period: 'Dec 2012 – Sep 2013',
+        stack: 'BIM Coordination · Clash Management · CATIA V5',
+        org: 'Gehry Technologies — Hyundai E&C',
+        summary: 'On-site BIM coordination lead for a first-of-a-kind irregular-shaped mega construction project in Doha. Managed 5,000+ clashes and 5,000+ RFIs, and built the Issue Manager tool that cut clash report generation from 3 days to 3 hours.',
+        meta: [
+          { label: 'Client',    value: 'Hyundai E&C / Gehry Technologies' },
+          { label: 'Location',  value: 'Museum Park St, Doha, Qatar' },
+          { label: 'Duration',  value: '10 months on-site' },
+          { label: 'Scale',     value: '5,000+ clashes · 5,000+ RFIs' },
+        ],
+        body: [
+          'Served as interior trade coordination lead on one of the most complex BIM coordination efforts of its era — a multibillion-dollar irregular-shaped museum in Doha with dozens of stakeholders. Led bi-weekly BIM coordination meetings, managed model submission and approval workflows, and maintained the clash/RFI register across all trades.',
+          'Developed the Issue Manager tool (Visual Basic / CATIA V5) specifically for this project, enabling the team to track and action 5,000+ clashes and 5,000+ RFIs efficiently. Clash report generation dropped from 3 days to 3 hours — a core productivity unlock for the coordination process.',
+        ],
+        images: [IMG + 'nmoq_photo_1.png', IMG + 'nmoq_photo_2.png'],
+      },
+
+      'firehopper': {
+        title: 'firehopper',
+        type: 'Product', typeClass: 'portfolio-card__tag--product',
+        period: '2018',
+        stack: 'C# · Google Firebase · Grasshopper · REST',
+        org: 'Personal / Open Source',
+        link: 'https://github.com/hodgoong/firehopper',
+        linkLabel: 'View on GitHub',
+        summary: 'Open-source Grasshopper plugin providing a RESTful interface to Google Firebase — built in two weekends as an MVP after flux.io announced its shutdown.',
+        meta: [
+          { label: 'Language',  value: 'C#' },
+          { label: 'Platform',  value: 'Grasshopper · Google Firebase' },
+          { label: 'Launched',  value: 'April 2, 2018' },
+          { label: 'Published', value: 'GitHub · Food4Rhino' },
+        ],
+        body: [
+          'When flux.io announced it was shutting down on March 31st 2018, I saw a gap: Grasshopper users needed a lightweight way to share real-time data between instances. I spent the first weekend building a working MVP and the second refining it into a proper plugin.',
+          'firehopper provides GET, PUT, PATCH, POST, DELETE and a key-value pair generator — all the primitives needed for HTTP communication and metadata sharing with Firebase from inside a Grasshopper definition.',
+        ],
+        images: [
+          'https://github.com/hodgoong/firehopper/raw/master/firehopper_logo.jpg',
+          'https://static.food4rhino.com/s3fs-public/styles/large/public/users-files/hojoong-chung/app/firehopper_example_sequencial.png',
+          'https://static.food4rhino.com/s3fs-public/users-files/hojoong-chung/app/firehopper_example_script_sharing.png',
+        ],
+      },
+
+      'project-owl': {
+        title: 'Project Owl',
+        type: 'Product', typeClass: 'portfolio-card__tag--product',
+        period: '2015',
+        stack: 'C# · Microsoft Kinect SDK · Grasshopper',
+        org: 'Personal / Open Source',
+        link: 'https://github.com/hodgoong/grasshopper-kinect2',
+        linkLabel: 'View on GitHub',
+        summary: 'Grasshopper component for live 3D point cloud generation using the Microsoft Kinect V2 sensor. Developed during an M.Sc at University of Stuttgart and later used as a core component in the Robotic Light Sculpture installation.',
+        meta: [
+          { label: 'Language',  value: 'C#' },
+          { label: 'Platform',  value: 'Grasshopper · Microsoft Kinect SDK' },
+          { label: 'Year',      value: '2015' },
+          { label: 'Used in',   value: 'Robotic Light Sculpture (2015)' },
+        ],
+        body: [
+          'Built during my M.Sc in Stuttgart as a tool to bring real-time 3D scanning into Grasshopper. Project Owl streams depth data from a Kinect V2 sensor and converts it into a live point cloud geometry, making it directly manipulable within a parametric design workflow.',
+          'The component became the sensing layer for the Robotic Light Sculpture installation — the robot\'s toolpath was derived from a scanned human body point cloud, with a custom pathfinding algorithm translating it into robot motion.',
+        ],
+        images: [
+          IMG + 'project_owl.png',
+          'https://hojoongchung.files.wordpress.com/2015/09/capture.png',
+          'https://i.ytimg.com/vi/N_5byI1DN18/maxresdefault.jpg',
+        ],
+      },
+
+      'flipcard': {
+        title: 'flipcard.io',
+        type: 'Product', typeClass: 'portfolio-card__tag--product',
+        period: '2018',
+        stack: 'Node.js · Express · MongoDB · Docker · Amazon Lightsail',
+        org: 'Personal',
+        link: 'https://github.com/hodgoong/flipcard',
+        linkLabel: 'View on GitHub',
+        summary: 'Full-stack vocabulary flashcard web app — solo designed, built, and deployed on AWS Lightsail. Built while living in Germany to make learning German vocabulary more systematic.',
+        meta: [
+          { label: 'Front-end', value: 'JavaScript' },
+          { label: 'Back-end',  value: 'Node.js · Express · MongoDB' },
+          { label: 'Infra',     value: 'Docker · Amazon Lightsail' },
+          { label: 'Status',    value: 'Closed (2018)' },
+        ],
+        body: [
+          'Designed and built end-to-end while living in Stuttgart. The app lets users create index card decks, flip through them during study sessions, and manage their collection — auth, CRUD, and a mobile-friendly interface all included.',
+          'The whole stack — Node.js + Express backend, MongoDB, Dockerised and deployed to Amazon Lightsail — was built solo. Motivated by a personal need for a vocabulary learning tool that actually matched how I study.',
+        ],
+        images: [
+          'https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture.PNG',
+          'https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture2.PNG',
+          'https://raw.githubusercontent.com/hodgoong/flipcard/master/public/img/flipcard_capture3.PNG',
+        ],
+      },
+
+      'script-based': {
+        title: 'Script-based Product Description',
+        type: 'Research', typeClass: 'portfolio-card__tag--research',
+        period: '2017',
+        stack: 'JavaScript · Node.js · Three.js · BIM',
+        org: 'BIM.5D, STRABAG / Ed. Züblin AG — with Gene Kao',
+        link: null,
+        summary: 'Using modern programming languages as a file format for describing, sharing, and visualising 3D product information. Presented at LDAC 2017, Dijon, France.',
+        meta: [
+          { label: 'Conference', value: 'LDAC 2017, Dijon, France' },
+          { label: 'Key benefit', value: 'Human-readable, web-native, class-based reuse' },
+          { label: 'Compared to', value: 'Legacy formats: STEP, IFC' },
+          { label: 'Co-author',  value: 'Gene Kao' },
+        ],
+        body: [
+          'The project explored using JavaScript as a product information description format. Benefits over legacy formats like STEP: classes as archetypes for reuse, behaviour described alongside geometry, human-readable content, and native web compatibility.',
+          'Presented jointly with Gene Kao at the Linked Data in Architecture and Construction (LDAC) 2017 conference in Dijon, France.',
+        ],
+        images: [
+          IMG + 'img_script-based/scriptbase2.png',
+          IMG + 'img_script-based/ldac2017.png',
+          IMG + 'img_script-based/scriptbase.png',
+        ],
+      },
+    };
+
+    // ── DOM refs ──────────────────────────────────────────
+    var drawer   = document.getElementById('drawer');
+    var drawerBody = document.getElementById('drawer-body');
+    var backdrop = document.getElementById('drawer-backdrop');
+    var closeBtn = document.getElementById('drawer-close');
+    var activeCard = null;
+
+    // ── Render drawer content ─────────────────────────────
+    function render(p) {
+      var heroImg = p.images[0]
+        ? '<img src="' + p.images[0] + '" alt="' + p.title + '" class="drawer__hero-img" loading="eager">'
+        : '<div class="drawer__hero-visual"><p class="drawer__hero-stack">' + p.stack + '</p></div>';
+
+      var metaItems = p.meta.map(function (m) {
+        return '<div class="drawer__meta-item"><dt class="drawer__meta-label">' + m.label + '</dt><dd class="drawer__meta-value">' + m.value + '</dd></div>';
+      }).join('');
+
+      var bodyParas = p.body.map(function (para) {
+        return '<p class="drawer__body-text">' + para + '</p>';
+      }).join('');
+
+      var gallery = p.images.slice(1).map(function (src) {
+        return '<img src="' + src + '" alt="" class="drawer__gallery-img" loading="lazy">';
+      }).join('');
+
+      var extLink = p.link
+        ? '<a href="' + p.link + '" target="_blank" rel="noopener noreferrer" class="drawer__ext-link">' +
+          (p.linkLabel || 'View Project') +
+          '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-3M9 3h4m0 0v4m0-4L7 11"/></svg></a>'
+        : '';
+
+      return heroImg +
+        '<div class="drawer__content">' +
+          '<div class="drawer__title-row">' +
+            '<span class="portfolio-card__tag ' + p.typeClass + '">' + p.type + '</span>' +
+            '<span class="drawer__period">' + p.period + '</span>' +
+          '</div>' +
+          '<h2 class="drawer__title">' + p.title + '</h2>' +
+          '<p class="drawer__org">' + p.org + '</p>' +
+          '<p class="drawer__summary">' + p.summary + '</p>' +
+          '<dl class="drawer__meta">' + metaItems + '</dl>' +
+          '<div class="drawer__body-paras">' + bodyParas + '</div>' +
+          (gallery ? '<div class="drawer__gallery">' + gallery + '</div>' : '') +
+          extLink +
+        '</div>';
+    }
+
+    // ── Open / Close ──────────────────────────────────────
+    function openDrawer(id) {
+      var p = PROJECTS[id];
+      if (!p) return;
+
+      drawerBody.innerHTML = render(p);
+      drawerBody.scrollTop = 0;
+
+      if (activeCard) activeCard.classList.remove('is-active');
+      activeCard = document.querySelector('[data-project-id="' + id + '"]');
+      if (activeCard) activeCard.classList.add('is-active');
+
+      drawer.classList.add('is-open');
+      backdrop.classList.add('is-open');
+      drawer.removeAttribute('aria-hidden');
+      document.body.classList.add('has-drawer');
+      closeBtn.focus();
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('is-open');
+      backdrop.classList.remove('is-open');
+      drawer.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('has-drawer');
+      if (activeCard) { activeCard.classList.remove('is-active'); activeCard = null; }
+    }
+
+    // ── Wire up cards ─────────────────────────────────────
+    document.querySelectorAll('.portfolio-card').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        e.preventDefault();
+        openDrawer(card.dataset.projectId);
+      });
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openDrawer(card.dataset.projectId);
+        }
+      });
+    });
+
+    closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (lightbox.classList.contains('is-open')) closeLightbox();
+      else if (drawer.classList.contains('is-open')) closeDrawer();
+    });
+    // ── Sorting ──────────────────────────────────────────
+    var grid = document.getElementById('work-grid');
+
+    function getYear(p) {
+      var m = p.period.match(/\d{4}/);
+      return m ? parseInt(m[0], 10) : 0;
+    }
+
+    function sortCards(criterion) {
+      var cards = Array.from(grid.querySelectorAll('.portfolio-card'));
+      cards.sort(function (a, b) {
+        var pA = PROJECTS[a.dataset.projectId];
+        var pB = PROJECTS[b.dataset.projectId];
+        if (!pA || !pB) return 0;
+        if (criterion === 'date') return getYear(pB) - getYear(pA);
+        if (criterion === 'type') {
+          var t = pA.type.localeCompare(pB.type);
+          return t !== 0 ? t : getYear(pB) - getYear(pA);
+        }
+        if (criterion === 'alpha') return pA.title.localeCompare(pB.title);
+        return 0;
+      });
+      cards.forEach(function (card) { grid.appendChild(card); });
+    }
+
+    document.querySelectorAll('.work-sort__btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.work-sort__btn').forEach(function (b) {
+          b.classList.remove('is-active');
+        });
+        btn.classList.add('is-active');
+        sortCards(btn.dataset.sort);
+      });
+    });
+
+    sortCards('date');
+
+    // ── Lightbox ─────────────────────────────────────────
+    var lightbox    = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || '';
+      lightbox.removeAttribute('aria-hidden');
+      lightbox.classList.add('is-open');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+    }
+
+    drawerBody.addEventListener('click', function (e) {
+      var img = e.target.closest('.drawer__hero-img, .drawer__gallery-img');
+      if (img) { e.stopPropagation(); openLightbox(img.src, img.alt); }
+    });
+
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+
+  })();
+  </script>
+
+</body>
+</html>
