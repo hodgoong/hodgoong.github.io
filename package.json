@@ -1,0 +1,14 @@
+{
+  "name": "hodgoong-portfolio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Portfolio site with blog — static build via marked + gray-matter",
+  "scripts": {
+    "build": "node build.js",
+    "test": "node --test test/unit/build.test.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.0"
+  }
+}
