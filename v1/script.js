@@ -1,245 +1,237 @@
-let folderRootUrl = 'https://api.github.com/repos/hodgoong/hodgoong.github.io/git/trees/master';
-
 /**
- * To close the content popup when ESC key is pressed. Handle ESC key (key code 27)
+ * PortfolioApp - Modernized Portfolio Management Module
+ * Handles fetching, parsing, and rendering of Markdown-based content.
  */
-// document.addEventListener('keyup', function(e) {
-//     if (e.keyCode === 27 && location.hash === 'popup-open') {
-//         switcher(this.id);
-//     }
-// });
 
-(init())();
+const PortfolioApp = (function() {
+    const CONFIG = {
+        repoRootUrl: 'https://api.github.com/repos/hodgoong/hodgoong.github.io/git/trees/master',
+        contentsBaseUrl: 'https://hodgoong.github.io/contents/',
+        gaID: 'UA-154366933-1'
+    };
 
-function init(){
-    if(location.hash !== ''){
-        location.hash=''
-    }
-    readFolder(folderRootUrl, searchTree);
-}
+    const state = {
+        isInitialized: false,
+        contents: []
+    };
 
-/**
- * To search the folder structure of 'contents' folder in the github repo
- * @param {string} res - HTTP response
- */
-function searchTree(res){
-    JSON.parse(res).tree.forEach(function(item){
-        if(item.path === 'contents'){
-            readFolder(item.url, function(res){
-                JSON.parse(res).tree.forEach(function(item){
-                    loadMarkdown(item.path);
-                });
-            });
+    /**
+     * Initialize the application
+     */
+    async function init() {
+        if (state.isInitialized) return;
+
+        // Clear hash on initial load if needed, but allow deep links
+        // if(location.hash !== '' && !location.hash.includes('contentId_')){
+        //     location.hash=''
+        // }
+
+        try {
+            await loadAllContents();
+            handleInitialHash();
+            state.isInitialized = true;
+        } catch (error) {
+            console.error('Failed to initialize PortfolioApp:', error);
         }
-    });
-}
-
-/**
- * To identify how many lines that loaded markdown has,
- * and create contents popup or not based on it
- * @param {*} data - loaded makrdown data
- * @param {*} fileName - markdown file name
- */
-function exportHtml(data, fileName) {
-    let html = '';
-    let cardId = 'cardId_' + fileName;
-    let contentId = 'contentId_' + fileName;
-
-    if(!data.length > 0){
-        return html;
     }
 
-    let arrByLines = data.split('\n');
-    let arrTitle = arrByLines[0];
-    let arrImgURL = arrByLines[1];
-    let arrDesc = arrByLines[2];
-    
-    //collect first two lines and use it for the preview
-    if(arrByLines.length >= 4){
-        html = createCard(arrTitle, arrImgURL, arrDesc, cardId)
+    /**
+     * Handle initial hash for deep linking
+     */
+    function handleInitialHash() {
+        if (location.hash) {
+            const id = location.hash.replace('#', '');
+            // Check if it's an About or specific project link
+            if (id === 'about') {
+                switcher('cardId_about');
+            } else {
+                switcher(`cardId_${id}`);
+            }
+        }
+    }
 
-        //collect rest of the lines to use it as a 
-        //main content for the popup window when clicked 
-        arrByLines.splice(0,3);
-        let txtLines = '';
-        arrByLines.forEach(function(line){
-            txtLines += line + '\n';
-        })
-        createContent(txtLines, contentId, arrImgURL);
-    }
-    else if(arrByLines.length == 3){
-        html = createCard(arrTitle, arrImgURL, arrDesc, cardId);
-    }
-    else if(arrByLines.length == 2){
-        html = createCard(arrTitle,arrImgURL, '', cardId);
-    }
-    else{
-        html = createCard(arrTitle,'', '', cardId);
-    }
+    /**
+     * Fetch and load all contents from the GitHub repository
+     */
+    async function loadAllContents() {
+        const rootResponse = await fetch(CONFIG.repoRootUrl);
+        const rootData = await rootResponse.json();
         
-    return html;
-}
+        const contentsFolder = rootData.tree.find(item => item.path === 'contents');
+        if (!contentsFolder) throw new Error('Contents folder not found');
 
-/**
- * To load markdown and append the output HTML to the index.html
- * @param {string} fileName - markdown file name stored in the github repo
- */
-function loadMarkdown(fileName){
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://hodgoong.github.io/contents/' + fileName, true);
-    xhr.send(null);
+        const contentsResponse = await fetch(contentsFolder.url);
+        const contentsData = await contentsResponse.json();
 
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                if(fileName.endsWith('.md')){
-                    fileName = fileName.replace('.md','');
-                }
+        const loadPromises = contentsData.tree
+            .filter(item => item.path.endsWith('.md'))
+            .map(item => loadMarkdown(item.path));
 
-                //fileName is an id for the HTML card and content element
-                let html = exportHtml(xhr.responseText, fileName);
-                if(fileName.endsWith('.md')){
-                    fileName = fileName.replace('.md','');
-                }
+        await Promise.all(loadPromises);
+    }
 
-                let x = document.createElement('div'); 
-                x.id = fileName;
-                x.className = 'card-container';
-                x.innerHTML = html;
-
-                let tag = document.createElement('div');
-
-                if(fileName.startsWith('prod_')){
-                    tag.className = 'tag tag-prod';
-                    tag.innerHTML = 'product';
-                } else if(fileName.startsWith('proj_')){
-                    tag.className = "tag tag-proj";
-                    tag.innerHTML = 'project';
-                } else if(fileName.startsWith('pub_')){
-                    tag.className = "tag tag-pub";
-                    tag.innerHTML = 'publication';
-                }
-                else if(fileName.startsWith('rnd_')){
-                    tag.className = "tag tag-rnd";
-                    tag.innerHTML = 'research';
-                }
-
-                x.appendChild(tag);
-                document.getElementById('products').appendChild(x);
-            }
+    /**
+     * Load an individual Markdown file and render it
+     * @param {string} fileName - Name of the markdown file
+     */
+    async function loadMarkdown(fileName) {
+        try {
+            const response = await fetch(CONFIG.contentsBaseUrl + fileName);
+            if (!response.ok) throw new Error(`Failed to load ${fileName}`);
+            
+            const text = await response.text();
+            const cleanFileName = fileName.replace('.md', '');
+            
+            renderContent(text, cleanFileName);
+        } catch (error) {
+            console.error(`Error loading markdown ${fileName}:`, error);
         }
     }
-}
 
-/**
- * To read folder structure of github repo
- * @param {string} url - url to the github repo
- * @param {string} fn - callback function
- */
-function readFolder(url, fn){
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', url , true);
-    xhr.send(null);
+    /**
+     * Parse markdown text and render card/content
+     * @param {string} data - Raw markdown content
+     * @param {string} fileName - File name without extension
+     */
+    function renderContent(data, fileName) {
+        if (!data.trim()) return;
 
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                fn(xhr.response);
+        const lines = data.split('\n');
+        const title = lines[0] || '';
+        const imgURL = lines[1] || '';
+        const desc = lines[2] || '';
+        const body = lines.slice(3).join('\n');
+
+        const cardId = `cardId_${fileName}`;
+        const contentId = `contentId_${fileName}`;
+
+        // Create popup content first
+        createContentPopup(body, contentId, imgURL);
+
+        // Don't render "about" as a card on the main grid
+        if (fileName === 'about') return;
+
+        // Render project card
+        const cardHtml = createCardHtml(title, imgURL, desc, cardId);
+        const container = document.createElement('div');
+        container.id = fileName;
+        container.className = 'card-container';
+        container.innerHTML = cardHtml;
+
+        const tag = createTag(fileName);
+        if (tag) container.appendChild(tag);
+
+        document.getElementById('products').appendChild(container);
+    }
+
+    /**
+     * Create HTML for the card
+     */
+    function createCardHtml(title, img, desc, id) {
+        return `
+            <div class='microcard' id='${id}' onClick='PortfolioApp.switcher(this.id)'>
+                <div class='microcard-img'>
+                    <img src='${img}' alt='${title}'>
+                </div>
+                <div class='microcard-text'>
+                    <a class='title'>${title}</a>
+                    <p class='description'>${desc}</p>
+                </div>
+            </div>
+        `;
+    }
+
+    /**
+     * Create content popup element
+     */
+    function createContentPopup(contents, id, img) {
+        const converter = new showdown.Converter();
+        const convertedHtml = converter.makeHtml(contents);
+        const popupHtml = `
+            <div class='contents' id='${id}'>
+                <div class='contents-header'>
+                    <img src='${img}' alt='header'>
+                </div>
+                <a class='x' id='${id}_button' onClick='PortfolioApp.switcher(this.id)'>X</a>
+                <div class='contents-body'>
+                    ${convertedHtml}
+                </div>
+            </div>
+        `;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'contents-popup';
+        wrapper.innerHTML = popupHtml;
+        document.getElementById('container-contents').appendChild(wrapper);
+    }
+
+    /**
+     * Create tag element based on file prefix
+     */
+    function createTag(fileName) {
+        const tag = document.createElement('div');
+        if (fileName.startsWith('prod_')) {
+            tag.className = 'tag tag-prod';
+            tag.innerHTML = 'product';
+        } else if (fileName.startsWith('proj_')) {
+            tag.className = 'tag tag-proj';
+            tag.innerHTML = 'project';
+        } else if (fileName.startsWith('pub_')) {
+            tag.className = 'tag tag-pub';
+            tag.innerHTML = 'publication';
+        } else if (fileName.startsWith('rnd_')) {
+            tag.className = 'tag tag-rnd';
+            tag.innerHTML = 'research';
+        } else {
+            return null;
+        }
+        return tag;
+    }
+
+    /**
+     * Switch between card view and content view
+     * @param {string} id - ID of the clicked element
+     */
+    function switcher(id) {
+        let hashAddress = '';
+        let contentId = '';
+
+        if (id.startsWith('cardId_')) {
+            hashAddress = id.replace('cardId_', '');
+            contentId = id.replace('cardId_', 'contentId_');
+            if (typeof gtag === 'function') {
+                gtag('config', CONFIG.gaID, { 'page_path': '/' + hashAddress });
+            }
+        } else if (id.startsWith('contentId_') && id.endsWith('_button')) {
+            contentId = id.replace('_button', '');
+            hashAddress = '';
+            if (typeof gtag === 'function') {
+                gtag('config', CONFIG.gaID, { 'page_path': '/' });
             }
         }
-    }
-}
 
-/**
- * Create HTML for the card displayed on the main page
- * @param {string} title - card title
- * @param {string} img - url indicating image file location
- * @param {string} desc - content description displayed on the card
- * @param {string} id - card id
- */
-function createCard(title, img='', desc='', id){
-    let cardHtml =         
-    `
-    <div class='microcard' id=${id} onClick='switcher(this.id)'>
-        <div class='microcard-img'>
-            <img src='${img}'>
-        </div>
-        <div class='microcard-text'>
-            <a class='title'>${title}</a>
-            <p class='description'> ${desc} </p>
-        </div>
-    </div>
-    `
+        const element = document.getElementById(contentId);
+        if (!element) return;
 
-    return cardHtml;
-}
-
-/**
- * Create HTML for the contents displayed when card is clicked
- * @param {string} contents - contents described in markdown format
- * @param {string} id - card id
- */
-function createContent(contents, id, img){
-    let converter = new showdown.Converter();
-    let convertedHtml = converter.makeHtml(contents)
-    let contentHtml=
-    `
-    <div class='contents' id='${id}' onscroll='scroll()'>
-        <div class='contents-header'>
-            <img src='${img}'>
-        </div>
-        <a class='x' id='${id + '_button'}' onClick='switcher(this.id)'>X</a>
-        <div class='contents-body'>
-            `+ convertedHtml + `
-        </div>
-    </div>
-    `
-
-    let x = document.createElement('div'); 
-    x.className = 'contents-popup';
-    x.innerHTML = contentHtml;
-
-    document.getElementById('container-contents').appendChild(x);
-}
-
-/**
- * Change the web-browser hash to identify shown-hidden state of the content popup
- * @param {string} id - card id
- */
-function switcher(id){
-    let hashAddress = '';
-    let contentId = '';
-
-    // when the card is clicked
-    if(id.startsWith('cardId_')){
-        hashAddress = id.replace('cardId_','');
-        contentId = id.replace('cardId_','contentId_');
-        gtag('config', gaID, {'page_path': '/' + hashAddress});
-    }
-
-    // when X is clicked
-    if(id.startsWith('contentId_') && id.endsWith('_button')){
-        hashAddress = '#' + id.replace('_button','').replace('contentId_','');
-        contentId = id.replace('_button','');
-        gtag('config', gaID, {'page_path': '/'});
-    }
-
-    // when the card is clicked
-    if(location.hash !== hashAddress){
-        if(document.getElementById(contentId)){
-            document.getElementById(contentId).style.display = 'inline';
-            document.getElementById(contentId).style.overflowY='scroll';
-            document.body.style.overflowY='hidden';
+        if (location.hash.replace('#', '') !== hashAddress) {
+            element.style.display = 'inline';
+            element.style.overflowY = 'scroll';
+            document.body.style.overflowY = 'hidden';
             location.hash = hashAddress;
-        }
-    } 
-    // when X is clicked
-    else if (location.hash === hashAddress){
-        if(document.getElementById(contentId)){
-            document.getElementById(contentId).style.display = 'none';
-            document.getElementById(contentId).style.overflowY='hidden';
-            document.body.style.overflow='initial';
+        } else {
+            element.style.display = 'none';
+            element.style.overflowY = 'hidden';
+            document.body.style.overflow = 'initial';
             location.hash = '';
         }
     }
-}
+
+    // Public API
+    return {
+        init: init,
+        switcher: switcher
+    };
+})();
+
+// Start the app
+document.addEventListener('DOMContentLoaded', PortfolioApp.init);
