@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Hojoong Chung</title>
+  <meta name="description" content="Curriculum Vitae of Hojoong Chung — Principal Solution Architect with 10+ years of enterprise delivery across APAC and EMEA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── CV page layout ── */
+    .cv-page {
+      padding-top: calc(var(--nav-height) + var(--space-12));
+      padding-bottom: var(--space-24);
+      min-height: 100vh;
+    }
+
+    .cv-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 var(--space-6);
+    }
+
+    /* ── CV Header ── */
+    .cv-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-6);
+      padding-bottom: var(--space-8);
+      border-bottom: 2px solid var(--border-strong);
+      margin-bottom: var(--space-10);
+    }
+
+    .cv-header__name {
+      font-size: clamp(1.75rem, 5vw, var(--text-4xl));
+      font-weight: var(--weight-bold);
+      letter-spacing: var(--tracking-tight);
+      line-height: var(--leading-tight);
+      color: var(--text);
+      margin-bottom: var(--space-1_5);
+    }
+
+    .cv-header__role {
+      font-family: var(--font-mono);
+      font-size: var(--text-md);
+      color: var(--primary);
+      margin-bottom: var(--space-4);
+    }
+
+    .cv-header__contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-1) var(--space-5);
+    }
+
+    .cv-header__contact-item {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      letter-spacing: var(--tracking-wide);
+    }
+
+    .cv-header__contact-item a {
+      color: var(--primary);
+      transition: color var(--duration-fast) var(--ease-out);
+    }
+
+    .cv-header__contact-item a:hover {
+      color: var(--primary-hover);
+    }
+
+    /* ── Print button ── */
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      height: 34px;
+      padding: 0 var(--space-4);
+      background-color: var(--surface-muted);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-medium);
+      letter-spacing: var(--tracking-wide);
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color var(--duration-fast) var(--ease-out),
+                  color var(--duration-fast) var(--ease-out),
+                  border-color var(--duration-fast) var(--ease-out);
+    }
+
+    .btn-print:hover {
+      background-color: var(--primary);
+      color: var(--text-on-brand);
+      border-color: var(--primary);
+    }
+
+    /* ── Body: sidebar + main ── */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    /* ── Sidebar ── */
+    .cv-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: sticky;
+      top: calc(var(--nav-height) + var(--space-6));
+    }
+
+    .cv-sidebar-section {
+      padding: var(--space-6) 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .cv-sidebar-section:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .cv-sidebar-section__heading {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-medium);
+      color: var(--text-subtle);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      margin-bottom: var(--space-4);
+    }
+
+    /* Skill list */
+    .cv-skill-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .cv-skill-list__name {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      color: var(--text);
+      display: block;
+      margin-bottom: var(--space-0_5);
+    }
+
+    .cv-skill-list__detail {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      line-height: var(--leading-relaxed);
+    }
+
+    /* Education list */
+    .cv-edu-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+
+    .cv-edu-item__degree {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      color: var(--text);
+      line-height: var(--leading-snug);
+    }
+
+    .cv-edu-item__school {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin-top: var(--space-0_5);
+    }
+
+    .cv-edu-item__period {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--text-subtle);
+      letter-spacing: var(--tracking-wide);
+      margin-top: var(--space-0_5);
+    }
+
+    .cv-edu-item__note {
+      font-size: var(--text-xs);
+      color: var(--text-subtle);
+      line-height: var(--leading-snug);
+      margin-top: var(--space-1);
+      font-style: italic;
+    }
+
+    /* Cert list */
+    .cv-cert-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .cv-cert-list__item {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      line-height: var(--leading-snug);
+      padding-left: var(--space-3);
+      border-left: 2px solid var(--border-strong);
+    }
+
+    /* ── Main content ── */
+    .cv-main {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .cv-block {
+      padding-bottom: var(--space-8);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cv-block:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .cv-block__label {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-medium);
+      color: var(--primary);
+      letter-spacing: var(--tracking-wider);
+      text-transform: uppercase;
+      margin-bottom: var(--space-5);
+    }
+
+    /* Summary paragraph */
+    .cv-summary-text {
+      font-size: var(--text-md);
+      color: var(--text-muted);
+      line-height: var(--leading-relaxed);
+    }
+
+    /* Experience list */
+    .cv-exp-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .cv-exp-item {
+      padding: var(--space-6) 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .cv-exp-item:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .cv-exp-item__header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: var(--space-4);
+      margin-bottom: var(--space-0_5);
+      flex-wrap: wrap;
+    }
+
+    .cv-exp-item__company {
+      font-size: var(--text-md);
+      font-weight: var(--weight-semibold);
+      color: var(--text);
+    }
+
+    .cv-exp-item__period {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--text-subtle);
+      letter-spacing: var(--tracking-wide);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .cv-exp-item__sub {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-2);
+      margin-bottom: var(--space-3);
+      flex-wrap: wrap;
+    }
+
+    .cv-exp-item__role {
+      font-size: var(--text-sm);
+      color: var(--primary);
+      font-weight: var(--weight-medium);
+    }
+
+    .cv-exp-item__location {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--text-subtle);
+      letter-spacing: var(--tracking-wide);
+    }
+
+    .cv-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .cv-bullets li {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      line-height: var(--leading-relaxed);
+      padding-left: var(--space-5);
+      position: relative;
+    }
+
+    .cv-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--text-subtle);
+      top: 1px;
+    }
+
+    /* ── Print styles ── */
+    @media print {
+      .nav,
+      .btn-print,
+      .footer { display: none !important; }
+
+      .cv-page { padding-top: var(--space-6); }
+      .cv-sidebar { position: static; }
+
+      .cv-header__name { font-size: 22pt; }
+      .cv-body { gap: var(--space-8); }
+
+      a { color: inherit !important; }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .cv-body {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+
+      .cv-sidebar {
+        position: static;
+        border-top: 1px solid var(--border);
+        padding-top: var(--space-8);
+      }
+
+      .cv-header {
+        flex-direction: column;
+        gap: var(--space-4);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav__brand" aria-label="Hojoong Chung — portfolio">HC</a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html#work"    class="nav__link">Work</a></li>
+      <li><a href="index.html#about"   class="nav__link">About</a></li>
+      <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+      <li><a href="cv.html" class="nav__link" aria-current="page" style="color:var(--text)">CV</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="https://github.com/hodgoong" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="GitHub profile">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </a>
+      <a href="mailto:hodgoong@gmail.com" class="nav__icon" aria-label="Send email">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18">
+          <path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── CV PAGE ── -->
+  <main class="cv-page">
+    <div class="cv-container">
+
+      <!-- Header -->
+      <header class="cv-header">
+        <div>
+          <h1 class="cv-header__name">Hojoong Chung</h1>
+          <p class="cv-header__role">Principal Solution Architect</p>
+          <div class="cv-header__contact">
+            <span class="cv-header__contact-item">Seoul, Korea</span>
+            <span class="cv-header__contact-item">
+              <a href="mailto:hodgoong@gmail.com">hodgoong@gmail.com</a>
+            </span>
+            <span class="cv-header__contact-item">
+              <a href="https://github.com/hodgoong" target="_blank" rel="noopener noreferrer">github.com/hodgoong</a>
+            </span>
+            <span class="cv-header__contact-item">
+              <a href="https://hojoongchung.wordpress.com" target="_blank" rel="noopener noreferrer">hojoongchung.wordpress.com</a>
+            </span>
+          </div>
+        </div>
+        <button class="btn-print" onclick="window.print()" aria-label="Print or export CV">
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="3" y="9" width="10" height="6" rx="1"/>
+            <path d="M3 9V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v4"/>
+            <path d="M5 1h6v3H5z"/>
+            <circle cx="12" cy="7" r=".75" fill="currentColor" stroke="none"/>
+          </svg>
+          Print / PDF
+        </button>
+      </header>
+
+      <!-- Body -->
+      <div class="cv-body">
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="cv-sidebar" aria-label="CV sidebar">
+
+          <section class="cv-sidebar-section">
+            <h2 class="cv-sidebar-section__heading">Competencies</h2>
+            <ul class="cv-skill-list" role="list">
+              <li>
+                <span class="cv-skill-list__name">AI &amp; LLM</span>
+                <span class="cv-skill-list__detail">Claude / Gemini agent prototyping, harness engineering, AI product delivery</span>
+              </li>
+              <li>
+                <span class="cv-skill-list__name">Customer Engineering</span>
+                <span class="cv-skill-list__detail">Technical discovery, architecture design, pilots, hands-on workshops</span>
+              </li>
+              <li>
+                <span class="cv-skill-list__name">Engineering</span>
+                <span class="cv-skill-list__detail">JavaScript / Node.js, Python, C#, MongoDB, PostgreSQL, AWS, Azure, Docker</span>
+              </li>
+              <li>
+                <span class="cv-skill-list__name">Enterprise Architecture</span>
+                <span class="cv-skill-list__detail">TOGAF, secure / sovereign cloud, high-security regulated industries</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="cv-sidebar-section">
+            <h2 class="cv-sidebar-section__heading">Education</h2>
+            <ul class="cv-edu-list" role="list">
+              <li>
+                <p class="cv-edu-item__degree">M.Sc</p>
+                <p class="cv-edu-item__school">University of Stuttgart</p>
+                <p class="cv-edu-item__period">2014 – 2016 · Stuttgart</p>
+                <p class="cv-edu-item__note">Design Computation, Robotic Fabrication, Data Processing</p>
+              </li>
+              <li>
+                <p class="cv-edu-item__degree">B.Arch (5-year)</p>
+                <p class="cv-edu-item__school">Yonsei University</p>
+                <p class="cv-edu-item__period">2004 – 2012 · Seoul</p>
+                <p class="cv-edu-item__note">BIM, Parametric Design, Lean Construction · KATUSA 2006–2008</p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="cv-sidebar-section">
+            <h2 class="cv-sidebar-section__heading">Certifications</h2>
+            <ul class="cv-cert-list" role="list">
+              <li class="cv-cert-list__item">AWS Certified AI Practitioner</li>
+              <li class="cv-cert-list__item">TOGAF Certified Enterprise Architect</li>
+              <li class="cv-cert-list__item">Professional Scrum Master (PSM1)</li>
+              <li class="cv-cert-list__item">Certified Change Practitioner (Prosci)</li>
+              <li class="cv-cert-list__item">Human-Centered Design Practitioner (LUMA)</li>
+              <li class="cv-cert-list__item">Neural Networks &amp; Deep Learning (Coursera)</li>
+              <li class="cv-cert-list__item">Data Analyst Nanodegree (Udacity)</li>
+            </ul>
+          </section>
+
+          <section class="cv-sidebar-section">
+            <h2 class="cv-sidebar-section__heading">Publications</h2>
+            <ul class="cv-cert-list" role="list">
+              <li class="cv-cert-list__item">Project Management Handbook — Co-authored, 2020</li>
+              <li class="cv-cert-list__item">BIM Handbook 2nd Ed. — Co-translated to Korean, 2014</li>
+            </ul>
+          </section>
+
+        </aside>
+
+        <!-- ── MAIN ── -->
+        <div class="cv-main">
+
+          <!-- Summary -->
+          <section class="cv-block">
+            <p class="cv-block__label">Professional Summary</p>
+            <p class="cv-summary-text">
+              Principal Solution Architect with 10+ years of enterprise technical delivery across the globe,
+              currently expanding into applied AI and LLM-powered solutions. Led the design and prototype of
+              a Claude-powered AI Chatbot for Samsung Electronics DS, presented at Autodesk University 2025.
+              Known for ramping quickly on new domains and cutting through complexity to identify the root
+              business problem before proposing solutions. Strong foundation in enterprise architecture,
+              data engineering, and customer-facing technical advisory. Track record of scaling consulting
+              revenue 28× ($183K → $5.3M). TOGAF-certified, AWS Certified AI Practitioner.
+              Bilingual Korean / English, deeply familiar with APAC enterprise and sovereign IT environments.
+            </p>
+          </section>
+
+          <!-- Experience -->
+          <section class="cv-block">
+            <p class="cv-block__label">Experience</p>
+            <ul class="cv-exp-list" role="list">
+
+              <!-- Autodesk APAC -->
+              <li class="cv-exp-item">
+                <div class="cv-exp-item__header">
+                  <span class="cv-exp-item__company">Autodesk</span>
+                  <span class="cv-exp-item__period">Feb 2022 – Present</span>
+                </div>
+                <div class="cv-exp-item__sub">
+                  <span class="cv-exp-item__role">Principal Solution Architect, APAC</span>
+                  <span class="cv-exp-item__location">· Seoul, Korea</span>
+                </div>
+                <ul class="cv-bullets">
+                  <li>Designed and prototyped a Claude-powered AI Chatbot for Samsung Electronics DS, enabling natural-language querying of complex 3D metadata; presented the architecture at <a href="https://www.autodesk.com/autodesk-university" target="_blank" rel="noopener noreferrer" class="text-link">Autodesk University 2025</a>.</li>
+                  <li>Designed and optimized a Node.js ETL pipeline (Autodesk Construction Cloud → AWS RDS), achieving 3× latency reduction and significant throughput gains in Phase 2.</li>
+                  <li>Served as trusted technical advisor to national core-industry accounts (Samsung Electronics DS, SK ON), navigating strict security protocols to integrate SaaS into highly secured private-cloud environments.</li>
+                  <li>Scaled regional consulting 28× ($183K → $5.3M) by identifying platform integration gaps, delivering technical training, and securing $1.9M in follow-on investment.</li>
+                  <li>Established standardized delivery frameworks as technical mentor and onboarding lead for new Solution Architects across the APAC team.</li>
+                </ul>
+              </li>
+
+              <!-- LG CNS -->
+              <li class="cv-exp-item">
+                <div class="cv-exp-item__header">
+                  <span class="cv-exp-item__company">LG CNS</span>
+                  <span class="cv-exp-item__period">May 2019 – Feb 2022</span>
+                </div>
+                <div class="cv-exp-item__sub">
+                  <span class="cv-exp-item__role">Consultant, Entrue Consulting</span>
+                  <span class="cv-exp-item__location">· Seoul, Korea</span>
+                </div>
+                <ul class="cv-bullets">
+                  <li>Led strategic design of the Smart City Data Hub Platform for Daejeon Metropolitan City; defined PoC scoring criteria and technical feasibility that secured $10M in Phase 2 funding.</li>
+                  <li>Managed end-to-end architecture of a $30M secure-collaboration project for Korea Exchange, including VDI and KMS components compliant with high-security financial regulations.</li>
+                  <li>Provided data-driven feasibility studies and market-fit designs for LG Group's ESG and EV Battery platforms, directly influencing C-level investment decisions.</li>
+                </ul>
+              </li>
+
+              <!-- Autodesk EMEA -->
+              <li class="cv-exp-item">
+                <div class="cv-exp-item__header">
+                  <span class="cv-exp-item__company">Autodesk</span>
+                  <span class="cv-exp-item__period">Jul 2018 – Dec 2018</span>
+                </div>
+                <div class="cv-exp-item__sub">
+                  <span class="cv-exp-item__role">Cloud Application Developer, EMEA</span>
+                  <span class="cv-exp-item__location">· Stuttgart, Germany</span>
+                </div>
+                <ul class="cv-bullets">
+                  <li>Delivered technical consulting and custom tool development leveraging Autodesk cloud APIs and Microsoft Azure for large enterprise customers across Germany, Sweden, and Australia.</li>
+                </ul>
+              </li>
+
+              <!-- Ed. Züblin -->
+              <li class="cv-exp-item">
+                <div class="cv-exp-item__header">
+                  <span class="cv-exp-item__company">Ed. Züblin (STRABAG)</span>
+                  <span class="cv-exp-item__period">Jan 2017 – Jun 2018</span>
+                </div>
+                <div class="cv-exp-item__sub">
+                  <span class="cv-exp-item__role">Project Engineer</span>
+                  <span class="cv-exp-item__location">· Stuttgart, Germany</span>
+                </div>
+                <ul class="cv-bullets">
+                  <li>Led a 4-developer team to build a production-level 3D issue tracking system (Node.js, MongoDB, Angular) and pioneered the organisation's first CI/CD pipeline (Docker, GitLab).</li>
+                  <li>Presented a JavaScript-based BIM–Semantic Web product modelling concept at the LDAC 2018 conference, Dijon, France.</li>
+                </ul>
+              </li>
+
+              <!-- Gehry Technologies -->
+              <li class="cv-exp-item">
+                <div class="cv-exp-item__header">
+                  <span class="cv-exp-item__company">Gehry Technologies</span>
+                  <span class="cv-exp-item__period">Jul 2012 – Jul 2014</span>
+                </div>
+                <div class="cv-exp-item__sub">
+                  <span class="cv-exp-item__role">Project Consultant</span>
+                  <span class="cv-exp-item__location">· Seoul, Korea</span>
+                </div>
+                <ul class="cv-bullets">
+                  <li>Led cloud-based BIM implementation and digital workflows for marquee global projects (Samsung C&amp;T $440M, Hyundai E&amp;C $434M) and drove enterprise-wide adoption of cloud-integrated delivery systems.</li>
+                </ul>
+              </li>
+
+            </ul>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer id="contact" class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <p class="footer__copy">Designed &amp; coded by Hojoong Chung. All rights reserved 2019–2026.</p>
+      <nav class="footer__links" aria-label="Footer links">
+        <a href="index.html" class="footer__link">Portfolio</a>
+        <a href="https://github.com/hodgoong" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
+        <a href="https://hojoongchung.wordpress.com" target="_blank" rel="noopener noreferrer" class="footer__link">Blog</a>
+        <a href="mailto:hodgoong@gmail.com" class="footer__link">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

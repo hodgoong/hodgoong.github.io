@@ -1,25 +1,14 @@
 {
-  "name": "hodgoong.github.io",
-  "version": "0.1.0",
-  "private": true,
+  "name": "hodgoong-portfolio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Portfolio site with blog — static build via marked + gray-matter",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "node build.js",
+    "test": "node --test test/unit/build.test.mjs"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "daisyui": "^4.12.10",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.0"
   }
 }

@@ -55,17 +55,33 @@ svg{
     vertical-align: middle;
 }
 
-#menu.container-fluid{
-    position:fixed;
-    background-color:rgba(255, 255, 255, 0.90);
-    top:60px;
+#menu.container-fluid {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.90);
+    top: 60px;
     height: 30px;
     text-align: right;
     padding-right: 6vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-#menu.container-fluid a{
-    padding: 6px;
+.menu-link {
+    font-size: 16px;
+    color: lightcoral !important;
+    cursor: pointer;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu-link:hover {
+    color: coral !important;
+}
+
+#menu.container-fluid a {
+    padding: 0 6px;
 }
 
 #spacer {
