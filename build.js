@@ -922,6 +922,9 @@ function main() {
   cpSync(imgSrc, imgDest, { recursive: true });
   console.log('  copied: v1/contents/img/ → out/v1/contents/img/');
 
+  cpSync(join(__dirname, 'CNAME'), join(outDir, 'CNAME'));
+  console.log('  copied: CNAME → out/CNAME');
+
   console.log(`\nTotal: ${sorted.length} post(s) generated`);
 }
 
