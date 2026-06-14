@@ -297,8 +297,8 @@ export function postTemplate(post, bodyHtml) {
     <a href="/" class="nav__brand" aria-label="Hojoong Chung home">HC</a>
     <ul class="nav__links" role="list">
       <li><a href="/#work"    class="nav__link">Work</a></li>
-      <li><a href="/#about"   class="nav__link">About</a></li>
       <li><a href="/blog/"    class="nav__link">Blog</a></li>
+      <li><a href="/#about"   class="nav__link">About</a></li>
     </ul>
     <div class="nav__actions">
       <a href="https://github.com/hodgoong" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="GitHub profile">
@@ -593,8 +593,8 @@ export function listingTemplate(posts) {
     <a href="/" class="nav__brand" aria-label="Hojoong Chung home">HC</a>
     <ul class="nav__links" role="list">
       <li><a href="/#work"    class="nav__link">Work</a></li>
-      <li><a href="/#about"   class="nav__link">About</a></li>
       <li><a href="/blog/"    class="nav__link">Blog</a></li>
+      <li><a href="/#about"   class="nav__link">About</a></li>
     </ul>
     <div class="nav__actions">
       <a href="https://github.com/hodgoong" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="GitHub profile">
