@@ -21,6 +21,11 @@ package-lock.json
 .DS_Store
 *.pem
 
+# local IDE / planning artifacts
+.claude/
+spec/
+sdd/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
