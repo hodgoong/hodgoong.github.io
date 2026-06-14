@@ -300,7 +300,6 @@ export function postTemplate(post, bodyHtml) {
       <li><a href="/#about"   class="nav__link">About</a></li>
       <li><a href="/blog/"    class="nav__link">Blog</a></li>
       <li><a href="/#contact" class="nav__link">Contact</a></li>
-      <li><a href="/cv.html"  class="nav__link">CV</a></li>
     </ul>
     <div class="nav__actions">
       <a href="https://github.com/hodgoong" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="GitHub profile">
@@ -603,7 +602,6 @@ export function listingTemplate(posts) {
       <li><a href="/#about"   class="nav__link">About</a></li>
       <li><a href="/blog/"    class="nav__link">Blog</a></li>
       <li><a href="/#contact" class="nav__link">Contact</a></li>
-      <li><a href="/cv.html"  class="nav__link">CV</a></li>
     </ul>
     <div class="nav__actions">
       <a href="https://github.com/hodgoong" target="_blank" rel="noopener noreferrer" class="nav__icon" aria-label="GitHub profile">
